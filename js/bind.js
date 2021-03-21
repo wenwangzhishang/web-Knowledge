@@ -22,7 +22,13 @@
 
  Function.prototype.bind() 函数
  bind() 方法创建一个新的函数， 当这个新函数被调用时其this置为提供的值，其参数列表前几项置为创建时指定的参数序列。
+
  */
+
+ /**
+  * 参考
+  * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+  */
 
 let a ={
   a: 1
