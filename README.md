@@ -22,3 +22,4 @@ https://developer.mozilla.org/zh-CN/
 # 可赞助一杯咖啡
 ![image](https://github.com/wenwangzhishang/-Knowledge/blob/master/img/WechatIMG23.jpeg)
 
+<img src="https://github.com/wenwangzhishang/-Knowledge/blob/master/img/WechatIMG23.jpeg" width="200" >
