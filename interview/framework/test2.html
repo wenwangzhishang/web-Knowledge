@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+ </head>
+ <body>
+    <input type="text" id="input">
+    <div class="dom" id="dom"></div>
+    <script>
+      
+      (function(){
+        let  data = {
+          value :'test'
+        }
+        let my = document.getElementById("dom")
+        let input = document.getElementById('input')
+        // my.innerHTML = data.value
+        // input.value = 11
+        input.addEventListener('keyup',function(ev){
+          console.log(ev.target.value)
+          // my.innerHTML = ev.target.value
+          data.value = ev.target.value
+        })
+        var bValue;
+    //  监听数据
+      let  defaineGetandSet =function(obj,proName){
+        try{
+          Object.defineProperty(obj,proName,{
+            get:function(e){
+              console.log('get',e)
+
+              return bValue
+            },
+            set: function(newValue) {
+
+              console.log('新数据',newValue)
+              // bValue = newValue;
+              my.innerHTML = newValue
+              input.value = newValue
+              console.log(data)   
+            },
+          })
+        }catch(err){
+
+        }
+      }
+        /**
+         * 可以理解为做数据劫持监听
+         */
+         defaineGetandSet(data, 'value');
+      setTimeout(function() {
+        data.value = 'test';
+      }, 2000)
+      })()
+    </script>
+ </body>
+ </html>

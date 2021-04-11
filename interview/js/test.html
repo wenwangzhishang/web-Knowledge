@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="./curr.js"></script> -->
+    <!-- <script src="./promise_es5.js"></script> -->
+    <script src="./mypro.js"></script>
+    <script>
+    
+   new myPromise((resolve,reject)=>{
+    resolve('test resolve')
+    // reject('test reject')
+   }).then(res=>{
+     console.log(res)
+    //  resolve('aa')
+    return new myPromise((resolve,reject)=>{
+        // return 1
+    resolve(123)
+    })
+   }).then(rres=>{
+       console.log('then 2',rres)
+    // console.log('then 2')
+    return '444'
+   }).then(backres=>{
+       console.log('then 3',backres)
+   })
+//    .then(err=>{
+ 
+//     console.log(222,err);
+  
+//    })
+//    .catch(err=>{
+//     console.log(333,err);
+//    }).catch(res=>{
+//        console.log(777,res);
+//    })
+
+
+    </script>
+</body>
+</html>

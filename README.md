@@ -18,6 +18,8 @@ https://developer.mozilla.org/zh-CN/
 |--1、可视化项目优化请求，当用户执行下一步操作之前，之前未完成的请求，全部取消，开始新的请求。
 # 有开发需求可联系  微信 2251597058
 
+# js 练习
+https://juejin.cn/post/6946022649768181774
 
 # 可赞助一杯咖啡
 <!-- ![image](https://github.com/wenwangzhishang/-Knowledge/blob/master/img/WechatIMG23.jpeg) -->
