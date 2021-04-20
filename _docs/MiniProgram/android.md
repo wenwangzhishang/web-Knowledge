@@ -1,6 +1,6 @@
 ---
-title: Android
-category: Devices
+title: 小程序2
+category: 小程序
 order: 2
 ---
 

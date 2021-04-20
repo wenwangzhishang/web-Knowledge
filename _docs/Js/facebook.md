@@ -1,6 +1,6 @@
 ---
-title: Facebook
-category: Contact Syncing
+title: JS1
+category: JS
 order: 1
 ---
 

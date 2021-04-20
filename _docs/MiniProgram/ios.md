@@ -1,6 +1,6 @@
 ---
-title: iOS
-category: Devices
+title: 小程序1
+category: 小程序
 order: 1
 ---
 
