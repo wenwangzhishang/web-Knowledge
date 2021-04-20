@@ -1,37 +1,38 @@
-## 基础知识1
+---
+title: Welcome
+---
 
-You can use the [editor on GitHub](https://github.com/wenwangzhishang/web-Knowledge/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is the **Edition** template from [CloudCannon](http://cloudcannon.com/).
+**Edition** is perfect for documenting your product, application or service.
+It's populated with example content to give you some ideas.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+ChatApp is a fictional chat application for sending messages and media to others.
+Teams and friend groups would use ChatApp to stay up to date if it existed.
 
-### Markdown
+> [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Getting Started
 
-```markdown
-Syntax highlighted code block
+Getting a message sent is quick and easy with ChatApp:
 
-# Header 1
-## Header 2
-### Header 3
+1. Sign up for an account
+2. Add your friends from their email addresses
+3. Type a message or send a photo
 
-- Bulleted
-- List
+> Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
 
-1. Numbered
-2. List
+### Features
 
-**Bold** and _Italic_ and `Code` text
+Explore more of ChatApp by reading about our features:
 
-[Link](url) and ![Image](src)
-```
+#### Media
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Send images, videos and other media to people. Sources include your computer, phone and Facebook.
 
-### Jekyll Themes
+#### Contact Syncing
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wenwangzhishang/web-Knowledge/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Sync your contact list with your phone and/or Facebook contacts. Never lose your contacts between devices again!
 
-### Support or Contact
+#### Devices
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ChatApp is available everywhere. Find out how to set it up on your all your devices.
