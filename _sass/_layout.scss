@@ -210,7 +210,9 @@ $nav-image: $baseurl + "/images/menu.svg";
 		margin-top: 55px;
 	}
 }
-
+nav{
+	overflow: auto;
+}
 nav,
 header > form {
 	display: none;
