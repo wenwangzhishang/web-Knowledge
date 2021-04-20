@@ -211,7 +211,7 @@ $nav-image: $baseurl + "/images/menu.svg";
 	}
 }
 nav{
-	overflow: auto;
+	overflow-y: auto;
 }
 nav,
 header > form {
