@@ -45,7 +45,8 @@ Getting a message sent is quick and easy with ChatApp:
 #### 可赞助一杯咖啡
 <!-- ![image](https://github.com/wenwangzhishang/-Knowledge/blob/master/img/WechatIMG23.jpeg) -->
 
-<img src="https://github.com/wenwangzhishang/web-Knowledge/blob/dev1/images/WechatIMG23.jpeg" width="300" >
+<!-- <img src="https://github.com/wenwangzhishang/web-Knowledge/blob/dev1/images/WechatIMG23.jpeg" width="300" > -->
+![img]({{site.url}}/images/WechatIMG23.jpeg)
 
 #### 更新规划
 暂定每月更新一篇 28更新
