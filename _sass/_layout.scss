@@ -6,6 +6,9 @@ input::-ms-reveal {
 body {
 	height: auto;
 	overflow-x: hidden;
+	// jack
+	max-height: 100%;
+	overflow-y:auto;
 	background-color: $body-background-color;
 
 	&.nav-open {
@@ -69,7 +72,9 @@ body {
 
 .main {
 	margin-top: $space + $nav-header-height;
-
+	//jack
+	max-height:100%;
+	overflow-y: auto;
 	@media (min-width: $mobile-break) {
 		margin-top: 0;
 	}
