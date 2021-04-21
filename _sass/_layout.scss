@@ -37,6 +37,18 @@ body {
 
 	@media (min-width: $mobile-break) {
 		padding: 0 0 0 $nav-width;
+		
+		header{
+			.left_head{
+				position:fixed;
+				top:0;
+				left:0 ;
+				width:$nav-width;
+			}
+			.main{
+				margin-top:108px;
+			}
+		}
 
 		&.nav-open {
 			overflow: auto;
@@ -85,6 +97,7 @@ body {
 	overflow-y: auto;
 	@media (min-width: $mobile-break) {
 		margin-top: 0;
+		
 	}
 }
 
