@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<header>
+		<div> 
 			<h1>
 				<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/emblem.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
 				{{ site.title }}
@@ -36,8 +36,8 @@
 				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
 				<input type="submit" value="Search" style="display: none;">
 			</form>
-		</header>
-		<aside>
+		</div>
+		<header>
 		
 
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
@@ -70,7 +70,7 @@
 					</li>
 				</ul>
 			</nav>
-		</aside>
+		</header>
 
 		<section class="main">
 			<div class="page-header">
