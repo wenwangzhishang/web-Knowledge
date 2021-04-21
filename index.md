@@ -27,7 +27,7 @@ Getting a message sent is quick and easy with ChatApp:
 
 <!-- Explore more of ChatApp by reading about our features: -->
 
-#### 框架部分
+#### 主流框架 
 
 <!-- Send images, videos and other media to people. Sources include your computer, phone and Facebook. -->
 
@@ -35,7 +35,7 @@ Getting a message sent is quick and easy with ChatApp:
 
 <!-- Sync your contact list with your phone and/or Facebook contacts. Never lose your contacts between devices again! -->
 
-#### 算法和网络层
+#### 网络和算法
 
 <!-- ChatApp is available everywhere. Find out how to set it up on your all your devices. -->
 
@@ -49,4 +49,4 @@ Getting a message sent is quick and easy with ChatApp:
 ![img](./images/WechatIMG23.jpeg){:width="300px"}
 
 #### 更新规划
-暂定每月更新一篇 28更新
+暂定每月28更新一篇 
