@@ -1,7 +1,7 @@
 ---
 title: Vue2
 category: Vue
-order: 3
+order: 1
 ---
 
 Share documents with your friends! Send work or school projects from your computer or phone.
