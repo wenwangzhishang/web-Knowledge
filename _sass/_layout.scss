@@ -69,6 +69,14 @@ body {
 		}
 	}
 }
+// 
+.righttips{
+	position: fixed;
+	right:10px;
+	bottom:30px;
+	width:40px;
+	border:1px solid #3583d6;
+}
 
 .main {
 	margin-top: $space + $nav-header-height;
