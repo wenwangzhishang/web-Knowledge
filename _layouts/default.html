@@ -44,12 +44,12 @@
 			</div>
 		
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
-				<ul>
+				<!-- <ul>
 					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
 						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
 					</li>
-				</ul>
+				</ul> -->
 
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
