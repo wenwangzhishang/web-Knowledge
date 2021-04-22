@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<div class="righttips">
+		<div class="righttips" id="backtop">
 			返回
 		</div>
 		<header>
@@ -89,6 +89,11 @@
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
 			});
+			document.getElementById("backtop").addEventListener("click", function () {
+				document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+			});
+
 		</script>
 	</body>
 </html>
