@@ -1,6 +1,6 @@
 ---
-title: Node2
-category: Node
+title: 浏览器的渲染机制
+category: 前端杂谈
 order: 1
 ---
 
