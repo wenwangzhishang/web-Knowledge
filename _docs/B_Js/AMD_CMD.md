@@ -1,5 +1,5 @@
 ---
-title: JS
+title: AMD、CMD、Common.js和ES6的异同
 category: JS
 order: 1
 ---
