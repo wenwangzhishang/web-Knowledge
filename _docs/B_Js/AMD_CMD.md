@@ -1,6 +1,6 @@
 ---
 title: AMD、CMD、Common.js和ES6的异同
-category: JS
+category: JS 基础及概念
 order: 1
 ---
 
