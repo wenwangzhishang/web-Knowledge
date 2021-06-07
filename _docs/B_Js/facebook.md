@@ -1,17 +1,40 @@
 ---
-title: JS1
+title: JS
 category: JS
 order: 1
 ---
 
-Sync your Facebook contacts with ChatApp. Any of your Facebook friends with ChatApp accounts are automatically added to your contact list!
+AMD/CMD/Common.js 和ES6的异同
 
-> Signing up with Facebook automatically starts syncing contacts.
+> 
+一、同步加载
+common.js 主要是同步加载，主要应用于Node.js 环境
+commonJS用同步的方式加载模块。在服务端，模块文件都存在本地磁盘，读取非常快，所以这样做不会有问题。但是在浏览器端，限于网络原因，更合理的方案是使用异步加载。
 
-To sync your contacts:
+二、异步加载
+  1、AMD 和require.js
+    a、多个JS文件可能有依赖关系，被依赖的文件需要早于依赖它的文件加载到浏览器。
+    b、JS加载的时候，浏览器会停止渲染页面，加载文件越多，浏览器失去响应时间越长。
 
-1. Open your *User Settings*
-2. Select the **Connect Facebook** button
-3. Authorise ChatApp
+    AMD规范采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。这里介绍用require.js实现AMD规范的模块化：用require.config()指定引用路径等，用define()定义模块，用require()加载模块。
 
-![](//placehold.it/800x600)
+  2、CMD 和 sea.js
+    CMD是另一种js模块化方案，它与AMD很类似，不同点在于：AMD 推崇依赖前置、提前执行，CMD推崇依赖就近、延迟执行。此规范其实是在sea.js推广过程中产生的。
+
+  3、ES6 MODULE
+    ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，旨在成为浏览器和服务器通用的模块解决方案。其模块功能主要由两个命令构成：export和import。export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能
+
+    使用import命令的时候，用户需要知道所要加载的变量名或函数名。其实ES6还提供了export default命令，为模块指定默认输出，对应的import语句不需要使用大括号。这也更趋近于ADM的引用写法。
+
+三、 ES6 模块与 CommonJS 模块的差异
+  1. CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
+
+    CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。
+    ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令import，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。换句话说，ES6 的import有点像 Unix 系统的“符号连接”，原始值变了，import加载的值也会跟着变。因此，ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。
+  2. CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
+    运行时加载: CommonJS 模块就是对象；即在输入时是先加载整个模块，生成一个对象，然后再从这个对象上面读取方法，这种加载称为“运行时加载”。
+    编译时加载: ES6 模块不是对象，而是通过 export 命令显式指定输出的代码，import时采用静态命令的形式。即在import时可以指定加载某个输出值，而不是加载整个模块，这种加载称为“编译时加载”。
+    
+  总结：CommonJS 加载的是一个对象（即module.exports属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
+
+
