@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>小程序渲染机制 — 以微信小程序为例 | 文王之殇 –前端加油站</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="小程序渲染机制 — 以微信小程序为例" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Product documentation template for Jekyll." />
+<meta property="og:description" content="Product documentation template for Jekyll." />
+<link rel="canonical" href="http://localhost:4000/F_MiniProgram/mini_1/" />
+<meta property="og:url" content="http://localhost:4000/F_MiniProgram/mini_1/" />
+<meta property="og:site_name" content="文王之殇 –前端加油站" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/F_MiniProgram/mini_1/","headline":"小程序渲染机制 — 以微信小程序为例","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"Product documentation template for Jekyll.","@type":"Article","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="文王之殇 --前端加油站" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<div class="righttips" id="backtop">
+			返回
+		</div>
+		<header>
+			<div class="left_head">	
+				<h1>
+					<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="文王之殇 --前端加油站 logo"></a>
+					文王之殇 --前端加油站
+					<button type="button" class="open-nav" id="open-nav"></button>
+				</h1>
+
+				<form action="/search/" method="get">
+					<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+					<input type="submit" value="Search" style="display: none;">
+				</form>
+
+			</div>
+		
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">欢迎</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/A_Css/vetically/">CSS</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/A_Css/vetically/">垂直居中</a></li>
+								
+									<li class="nav-item "><a href="/A_Css/box/">盒模型</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/B_Js/AMD_CMD/">JS 基础及概念</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/B_Js/AMD_CMD/">AMD、CMD、Common.js和ES6的异同</a></li>
+								
+									<li class="nav-item "><a href="/B_Js/es6_export/">export、export default 和 module.export的异同</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/C_Vue/documents/">Vue</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/C_Vue/documents/">Vue2</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/D_Webpack/webpack_1/">Webpack</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_1/">Webpack 基础和进阶</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_2/">Webpack 和 Vite 的比较</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_3/">前端如何利用Webpack进行代码分析和优化</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/E_Node/node_1/">Node</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/E_Node/node_1/">Express的基础</a></li>
+								
+									<li class="nav-item "><a href="/E_Node/node_2/">Koa 基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/F_MiniProgram/mini_1/">小程序</a>
+							<ul>
+								
+									<li class="nav-item current"><a href="/F_MiniProgram/mini_1/">小程序渲染机制 --- 以微信小程序为例</a></li>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/min_2/">小程序开发步骤讲解</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/G_Angular/angular_1/">Angular</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/G_Angular/angular_1/">浅析angular</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/K_React/react_1/">React</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/K_React/react_1/">React基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/L_Basic/web_1/">前端杂谈</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/L_Basic/web_1/">浏览器的渲染机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_2/">前端部署的发展历程</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_3/">浏览器缓存机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_4/">xhr 和 fetch请求方式的比较</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_5/">输入一个url发生了什么</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_6/">http 演进</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_7/">前端大厦的基石 --- AST</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_8/">浅谈前端优化的方向</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/M_Program/program_1/">项目</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/M_Program/program_1/">数据可视化项目</a></li>
+								
+									<li class="nav-item "><a href="/M_Program/program_2/">新零售会员通 -- 天猫 有赞 微信会员渠道打通项目</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!-- <h2>小程序</h2> -->
+				<h3>小程序渲染机制 --- 以微信小程序为例</h3>
+			</div>
+			<article class="content">
+				
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+			document.getElementById("backtop").addEventListener("click", function () {
+				document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>xhr 和 fetch请求方式的比较 | 文王之殇 –前端加油站</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="xhr 和 fetch请求方式的比较" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="XMLHttpRequest对象 ———— xhr 类请求 现代浏览器，最开始与服务器交换数据，都是通过XMLHttpRequest对象。它可以使用JSON、XML、HTML和text文本等格式发送和接收数据。 优点：" />
+<meta property="og:description" content="XMLHttpRequest对象 ———— xhr 类请求 现代浏览器，最开始与服务器交换数据，都是通过XMLHttpRequest对象。它可以使用JSON、XML、HTML和text文本等格式发送和接收数据。 优点：" />
+<link rel="canonical" href="http://localhost:4000/L_Basic/web_4/" />
+<meta property="og:url" content="http://localhost:4000/L_Basic/web_4/" />
+<meta property="og:site_name" content="文王之殇 –前端加油站" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/L_Basic/web_4/","headline":"xhr 和 fetch请求方式的比较","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"XMLHttpRequest对象 ———— xhr 类请求 现代浏览器，最开始与服务器交换数据，都是通过XMLHttpRequest对象。它可以使用JSON、XML、HTML和text文本等格式发送和接收数据。 优点：","@type":"Article","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="文王之殇 --前端加油站" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<div class="righttips" id="backtop">
+			返回
+		</div>
+		<header>
+			<div class="left_head">	
+				<h1>
+					<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="文王之殇 --前端加油站 logo"></a>
+					文王之殇 --前端加油站
+					<button type="button" class="open-nav" id="open-nav"></button>
+				</h1>
+
+				<form action="/search/" method="get">
+					<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+					<input type="submit" value="Search" style="display: none;">
+				</form>
+
+			</div>
+		
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">欢迎</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/A_Css/vetically/">CSS</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/A_Css/vetically/">垂直居中</a></li>
+								
+									<li class="nav-item "><a href="/A_Css/box/">盒模型</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/B_Js/AMD_CMD/">JS 基础及概念</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/B_Js/AMD_CMD/">AMD、CMD、Common.js和ES6的异同</a></li>
+								
+									<li class="nav-item "><a href="/B_Js/es6_export/">export、export default 和 module.export的异同</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/C_Vue/documents/">Vue</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/C_Vue/documents/">Vue2</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/D_Webpack/webpack_1/">Webpack</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_1/">Webpack 基础和进阶</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_2/">Webpack 和 Vite 的比较</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_3/">前端如何利用Webpack进行代码分析和优化</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/E_Node/node_1/">Node</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/E_Node/node_1/">Express的基础</a></li>
+								
+									<li class="nav-item "><a href="/E_Node/node_2/">Koa 基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/F_MiniProgram/mini_1/">小程序</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/mini_1/">小程序渲染机制 --- 以微信小程序为例</a></li>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/min_2/">小程序开发步骤讲解</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/G_Angular/angular_1/">Angular</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/G_Angular/angular_1/">浅析angular</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/K_React/react_1/">React</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/K_React/react_1/">React基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/L_Basic/web_1/">前端杂谈</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/L_Basic/web_1/">浏览器的渲染机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_2/">前端部署的发展历程</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_3/">浏览器缓存机制</a></li>
+								
+									<li class="nav-item current"><a href="/L_Basic/web_4/">xhr 和 fetch请求方式的比较</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_5/">输入一个url发生了什么</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_6/">http 演进</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_7/">前端大厦的基石 --- AST</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_8/">浅谈前端优化的方向</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/M_Program/program_1/">项目</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/M_Program/program_1/">数据可视化项目</a></li>
+								
+									<li class="nav-item "><a href="/M_Program/program_2/">新零售会员通 -- 天猫 有赞 微信会员渠道打通项目</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!-- <h2>前端杂谈</h2> -->
+				<h3>xhr 和 fetch请求方式的比较</h3>
+			</div>
+			<article class="content">
+				<blockquote>
+  <p>XMLHttpRequest对象 ———— xhr 类请求 
+    现代浏览器，最开始与服务器交换数据，都是通过XMLHttpRequest对象。它可以使用JSON、XML、HTML和text文本等格式发送和接收数据。
+    优点：</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>不重新加载页面的情况下更新网页  
+在页面已加载后从服务器请求/接收数据  
+在后台向服务器发送数据。
+
+缺点：  
+使用起来也比较繁琐，需要设置很多值。  
+早期的IE浏览器有自己的实现，这样需要写兼容代码。  
+
+ajax请求
+
+
+
+jquery
+
+
+axios 封装库
+</code></pre></div></div>
+
+<blockquote>
+  <p>fetch 
+  Fetch API提供了一个 JavaScript 接口，用于访问和操作HTTP管道的部分，例如请求和响应。它还提供了一个全局 fetch() 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
+  fetch 是底层API，代替XHR，可以轻松处理各种格式，非文本化格式。可以很容易的被其他技术使用，例如Service Workers。但是想要很好的使用fetch，需要做一些封装处理。</p>
+</blockquote>
+
+<ol>
+  <li>fetch的语法简洁，更语义化</li>
+  <li>基于promise，支持async/await</li>
+  <li>同构方便，使用isomorphic-fetch</li>
+</ol>
+
+<p>Fetch的缺点：</p>
+
+<ol>
+  <li>fetch只对网络错误报错，http状态码错误不报错</li>
+  <li>fetch不支持abort，无法终止</li>
+  <li>fetch不支持超时控制，使用setTimeout和Promise.reject实现的超时控制不能阻止请求过程继续在后台运行，造成了流量的浪费</li>
+  <li>fetch没有原生检测请求进度的方式，XHR可以</li>
+  <li>默认情况下fetch不发送cookie，除非手动配置</li>
+</ol>
+
+<p>参考文档：https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch</p>
+
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+			document.getElementById("backtop").addEventListener("click", function () {
+				document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+			});
+
+		</script>
+	</body>
+</html>

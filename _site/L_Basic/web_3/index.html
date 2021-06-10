@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>浏览器缓存机制 | 文王之殇 –前端加油站</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="浏览器缓存机制" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="web缓存描述 ： Web 缓存是可以自动保存常见文档副本的 HTTP 设备。当 Web 请求抵达缓存时， 如果本地有“已缓存的”副本，就可以从本地存储设备而不是原始服务器中提取这 个文档。（此结论来自http权威指南） 缓存的优缺点： 优点：" />
+<meta property="og:description" content="web缓存描述 ： Web 缓存是可以自动保存常见文档副本的 HTTP 设备。当 Web 请求抵达缓存时， 如果本地有“已缓存的”副本，就可以从本地存储设备而不是原始服务器中提取这 个文档。（此结论来自http权威指南） 缓存的优缺点： 优点：" />
+<link rel="canonical" href="http://localhost:4000/L_Basic/web_3/" />
+<meta property="og:url" content="http://localhost:4000/L_Basic/web_3/" />
+<meta property="og:site_name" content="文王之殇 –前端加油站" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/L_Basic/web_3/","headline":"浏览器缓存机制","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"web缓存描述 ： Web 缓存是可以自动保存常见文档副本的 HTTP 设备。当 Web 请求抵达缓存时， 如果本地有“已缓存的”副本，就可以从本地存储设备而不是原始服务器中提取这 个文档。（此结论来自http权威指南） 缓存的优缺点： 优点：","@type":"Article","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="文王之殇 --前端加油站" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<div class="righttips" id="backtop">
+			返回
+		</div>
+		<header>
+			<div class="left_head">	
+				<h1>
+					<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="文王之殇 --前端加油站 logo"></a>
+					文王之殇 --前端加油站
+					<button type="button" class="open-nav" id="open-nav"></button>
+				</h1>
+
+				<form action="/search/" method="get">
+					<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+					<input type="submit" value="Search" style="display: none;">
+				</form>
+
+			</div>
+		
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">欢迎</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/A_Css/vetically/">CSS</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/A_Css/vetically/">垂直居中</a></li>
+								
+									<li class="nav-item "><a href="/A_Css/box/">盒模型</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/B_Js/AMD_CMD/">JS 基础及概念</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/B_Js/AMD_CMD/">AMD、CMD、Common.js和ES6的异同</a></li>
+								
+									<li class="nav-item "><a href="/B_Js/es6_export/">export、export default 和 module.export的异同</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/C_Vue/documents/">Vue</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/C_Vue/documents/">Vue2</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/D_Webpack/webpack_1/">Webpack</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_1/">Webpack 基础和进阶</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_2/">Webpack 和 Vite 的比较</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_3/">前端如何利用Webpack进行代码分析和优化</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/E_Node/node_1/">Node</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/E_Node/node_1/">Express的基础</a></li>
+								
+									<li class="nav-item "><a href="/E_Node/node_2/">Koa 基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/F_MiniProgram/mini_1/">小程序</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/mini_1/">小程序渲染机制 --- 以微信小程序为例</a></li>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/min_2/">小程序开发步骤讲解</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/G_Angular/angular_1/">Angular</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/G_Angular/angular_1/">浅析angular</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/K_React/react_1/">React</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/K_React/react_1/">React基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/L_Basic/web_1/">前端杂谈</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/L_Basic/web_1/">浏览器的渲染机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_2/">前端部署的发展历程</a></li>
+								
+									<li class="nav-item current"><a href="/L_Basic/web_3/">浏览器缓存机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_4/">xhr 和 fetch请求方式的比较</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_5/">输入一个url发生了什么</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_6/">http 演进</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_7/">前端大厦的基石 --- AST</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_8/">浅谈前端优化的方向</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/M_Program/program_1/">项目</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/M_Program/program_1/">数据可视化项目</a></li>
+								
+									<li class="nav-item "><a href="/M_Program/program_2/">新零售会员通 -- 天猫 有赞 微信会员渠道打通项目</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!-- <h2>前端杂谈</h2> -->
+				<h3>浏览器缓存机制</h3>
+			</div>
+			<article class="content">
+				<p>web缓存描述 ：
+Web 缓存是可以自动保存常见文档副本的 HTTP 设备。当 Web 请求抵达缓存时， 如果本地有“已缓存的”副本，就可以从本地存储设备而不是原始服务器中提取这 个文档。（此结论来自http权威指南）
+缓存的优缺点：
+优点：</p>
+
+<p>缓存减少了冗余的数据传输，节省了你的网络费用。
+缓存缓解了网络瓶颈的问题。不需要更多的带宽就能够更快地加载页面。
+缓存降低了对原始服务器的要求。服务器可以更快地响应，避免过载的出现。
+缓存降低了距离时延，因为从较远的地方加载页面会更慢一些。</p>
+
+<p>缺点：</p>
+
+<p>缓存中的数据可能与服务器的数据不一致；
+消耗内存；</p>
+
+<p>缓存验证概述：
+缓存可分为强缓存和协商缓存。</p>
+
+<p>1，浏览器进行资源请求时，会判断response headers是否命中强缓存，如果命中，直接从本地读取缓存，不会向服务器发送请求，</p>
+
+<p>2，当强缓存没有命中时，会发送请求到服务端，判断协商缓存是否命中，如果命中，服务器将请求返回，不会返回资源，告诉浏览器从本地读取缓存。如何不命中，服务器直接返回资源<br />
+区别： 强缓存命中，不会请求服务器，直接请求缓存；协商缓存命中，会请求服务器，不会返回内容，然后读取缓存；</p>
+
+<p>缓存的处理流程
+from memory cache 和 from disk cache的区别
+from memory cache：字面理解是从内存中，其实也是字面的含义，这个资源是直接从内存中拿到的，不会请求服务器一般已经加载过该资源且缓存在了内存当中，当关闭该页面时，此资源就被内存释放掉了，再次重新打开相同页面时不会出现from memory cache的情况
+from disk cache：同上类似，此资源是从磁盘当中取出的，也是在已经在之前的某个时间加载过该资源，不会请求服务器但是此资源不会随着该页面的关闭而释放掉，因为是存在硬盘当中的，下次打开仍会from disk cache</p>
+
+<p>from memory cache代表使用内存中的缓存，from disk cache则代表使用的是硬盘中的缓存，浏览器读取缓存的顺序为memory –&gt; disk。</p>
+
+<p>访问https://heyingye.github.io/ –&gt; 200 –&gt; 关闭博客的标签页 –&gt; 重新打开https://heyingye.github.io/ –&gt; 200(from disk cache) –&gt; 刷新 –&gt; 200(from memory cache)</p>
+
+<p>我们需要了解内存缓存(from memory cache)和硬盘缓存(from disk cache)，如下:</p>
+
+<p>内存缓存(from memory cache)：内存缓存具有两个特点，分别是快速读取和时效性：</p>
+
+<p>快速读取：内存缓存会将编译解析后的文件，直接存入该进程的内存中，占据该进程一定的内存资源，以方便下次运行使用时的快速读取。</p>
+
+<p>时效性：一旦该进程关闭，则该进程的内存则会清空。</p>
+
+<p>硬盘缓存(from disk cache)：硬盘缓存则是直接将缓存写入硬盘文件中，读取缓存需要对该缓存存放的硬盘文件进行I/O操作，然后重新解析该缓存内容，读取复杂，速度比内存缓存慢。</p>
+
+<p>在浏览器中，浏览器会在js和图片等文件解析执行后直接存入内存缓存中，那么当刷新页面时只需直接从内存缓存中读取(from memory cache)；而css文件则会存入硬盘文件中，所以每次渲染页面都需要从硬盘读取缓存(from disk cache)。</p>
+
+<p>以下是缓存实现的四种方式
+强缓存
+强缓存又分为Expires 和 Cache-Control
+Expires,该值是一个GMT时间格式个字符串，浏览器进行第一次请求时，服务器会在返回头部加上Expires，下次请求，如果在这个时间之前则命中缓存，</p>
+
+<p>app.get(‘/’, (req, res) =&gt; {</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const cssContent = path.join(__dirname, './html/index.html');  
+
+fs.readFile(cssContent, function(err, data) { 
+
+      res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());  
+
+    res.end(data);  
+
+})  
+</code></pre></div></div>
+
+<p>});</p>
+
+<p>复制代码Cache-Control ，该值是利用max-age判断缓存的生命周期，是以秒为单位，如何在生命周期时间内，则命中缓存</p>
+
+<p>app.get(‘/’, (req, res) =&gt; {
+    const cssContent = path.join(__dirname, ‘./html/index.html’);
+    fs.readFile(cssContent, function(err, data) {
+        res.setHeader(“Cache-Control”, “max-age=0”);
+        res.end(data);
+    })
+});</p>
+
+<p>复制代码命中缓存：</p>
+
+<p>协商缓存
+协商缓存利用Last-Modified , If-Modified-Since 和 ETag , If-None-Match来实现
+Last-Modified , If-Modified-Since
+Last-Modified： 表示为为实体头部部分，response返回，表示为资源的最后更新时间</p>
+
+<p>If-Modified-Since：通过比较两次的时间判断，资源在请求期间是否有修改，假如没有修改，则命中协商缓存，浏览器从缓存中读取资源，如果没有命中，资源有过修改，返回新的Last-Modified时间和服务器资源
+    app.get(‘/’, (req, res) =&gt; {
+    const cssContent = path.join(__dirname, ‘./html/index.html’)
+    fs.stat(cssContent, (err, start) =&gt; {
+        if (req.headers[‘if-modified-since’] === start.mtime.toUTCString()) {
+            res.writeHead(304, ‘Not Modified’);
+            res.end();
+        } else {
+            fs.readFile(cssContent, function (err, data) {
+                let lastModified = start.mtime.toUTCString();
+                res.setHeader(‘Last-Modified’, lastModified);
+                res.writeHead(200, ‘OK’);
+                res.end(data);
+            })
+        }
+    })</p>
+
+<p>});
+复制代码ETag , If-None-Match
+有些情况下仅判断最后修改日期来验证资源是否有改动是不够的：
+1，存在周期性重写某些资源，但资源实际包含的内容并无变化；
+2，被修改的信息并不重要，如注释等；
+3，Last-Modified无法精确到毫秒，但有些资源更新频率有时会小于一秒。</p>
+
+<p>ETag:为相应头部字段，表示资源内容的唯一标识，随服务器response返回；</p>
+
+<p>If-None-Match: 服务器比较请求头中的If-None-Match和当前资源中的etag是否一致，来判断资源是否修改过，如果没有修改，则命中缓存，浏览器从缓存中读取资源，如果修改过，服务器会返回新的etag，并返回资源；
+app.get(‘/home’, (req, res) =&gt; {</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const cssContent = path.join(__dirname, './html/index.html')
+
+fs.stat(cssContent, (err, start) =&gt; {
+
+    let etag = md5(cssContent);
+
+    if (req.headers['if-none-match'] === etag) {
+
+        res.writeHead(304, 'Not Modified');
+
+        res.end();
+
+    } else {
+
+        fs.readFile(cssContent, function (err, data) {
+
+            res.setHeader('Etag', etag);
+
+            res.writeHead(200, 'OK');
+
+            res.end(data);
+
+        })
+
+    }
+
+})
+</code></pre></div></div>
+
+<p>});
+复制代码不推荐使用 Expires 首部，它指定的是实际的过期日期而不是秒数。HTTP 设计者 后来认为，由于很多服务器的时钟都不同步，或者不正确，所以最好还是用剩余秒 数，而不是绝对时间来表示过期时间。
+ETag解决了Last-Modified使用时可能出现的资源的时间戳变了但内容没变及如果再一秒钟以内资源变化但Last-Modified没变的问题，感觉ETag更加稳妥。
+补充：根据浏览器缓存策略，Expire和Cache-Control用回车、后退、F5刷新会跳过本地缓存，每次都会从服务器中获数据。</p>
+
+<p>参考：https://mp.weixin.qq.com/s/d2zeGhUptGUGJpB5xHQbOA</p>
+
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+			document.getElementById("backtop").addEventListener("click", function () {
+				document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+			});
+
+		</script>
+	</body>
+</html>

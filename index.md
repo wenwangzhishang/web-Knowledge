@@ -39,8 +39,10 @@ Getting a message sent is quick and easy with ChatApp:
 
 <!-- ChatApp is available everywhere. Find out how to set it up on your all your devices. -->
 
+
+
 #### 联系 
-微信 2251597058
+微信 2251597058 可私信我订阅主题
 
 #### 可赞助一杯咖啡
 <!-- ![image](https://github.com/wenwangzhishang/-Knowledge/blob/master/img/WechatIMG23.jpeg) -->
@@ -48,5 +50,7 @@ Getting a message sent is quick and easy with ChatApp:
 <!-- <img src="https://github.com/wenwangzhishang/web-Knowledge/blob/dev1/images/WechatIMG23.jpeg" width="300" > -->
 ![img](./images/WechatIMG23.jpeg){:width="300px"}
 
+#### 好文共享
+[一名【合格】前端工程师的自检清单](https://juejin.cn/post/6844903830887366670)
 #### 更新规划
 暂定每月28更新一篇 

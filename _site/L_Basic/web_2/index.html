@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>前端部署的发展历程 | 文王之殇 –前端加油站</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="前端部署的发展历程" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Product documentation template for Jekyll." />
+<meta property="og:description" content="Product documentation template for Jekyll." />
+<link rel="canonical" href="http://localhost:4000/L_Basic/web_2/" />
+<meta property="og:url" content="http://localhost:4000/L_Basic/web_2/" />
+<meta property="og:site_name" content="文王之殇 –前端加油站" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/L_Basic/web_2/","headline":"前端部署的发展历程","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"Product documentation template for Jekyll.","@type":"Article","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="文王之殇 --前端加油站" />
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		
+	</head>
+
+	<body>
+		<div class="righttips" id="backtop">
+			返回
+		</div>
+		<header>
+			<div class="left_head">	
+				<h1>
+					<a href="/"><img src="/images/emblem.svg" width="40" height="40" alt="文王之殇 --前端加油站 logo"></a>
+					文王之殇 --前端加油站
+					<button type="button" class="open-nav" id="open-nav"></button>
+				</h1>
+
+				<form action="/search/" method="get">
+					<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+					<input type="submit" value="Search" style="display: none;">
+				</form>
+
+			</div>
+		
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">欢迎</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/A_Css/vetically/">CSS</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/A_Css/vetically/">垂直居中</a></li>
+								
+									<li class="nav-item "><a href="/A_Css/box/">盒模型</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/B_Js/AMD_CMD/">JS 基础及概念</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/B_Js/AMD_CMD/">AMD、CMD、Common.js和ES6的异同</a></li>
+								
+									<li class="nav-item "><a href="/B_Js/es6_export/">export、export default 和 module.export的异同</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/C_Vue/documents/">Vue</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/C_Vue/documents/">Vue2</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/D_Webpack/webpack_1/">Webpack</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_1/">Webpack 基础和进阶</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_2/">Webpack 和 Vite 的比较</a></li>
+								
+									<li class="nav-item "><a href="/D_Webpack/webpack_3/">前端如何利用Webpack进行代码分析和优化</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/E_Node/node_1/">Node</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/E_Node/node_1/">Express的基础</a></li>
+								
+									<li class="nav-item "><a href="/E_Node/node_2/">Koa 基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/F_MiniProgram/mini_1/">小程序</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/mini_1/">小程序渲染机制 --- 以微信小程序为例</a></li>
+								
+									<li class="nav-item "><a href="/F_MiniProgram/min_2/">小程序开发步骤讲解</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/G_Angular/angular_1/">Angular</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/G_Angular/angular_1/">浅析angular</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/K_React/react_1/">React</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/K_React/react_1/">React基础</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/L_Basic/web_1/">前端杂谈</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/L_Basic/web_1/">浏览器的渲染机制</a></li>
+								
+									<li class="nav-item current"><a href="/L_Basic/web_2/">前端部署的发展历程</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_3/">浏览器缓存机制</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_4/">xhr 和 fetch请求方式的比较</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_5/">输入一个url发生了什么</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_6/">http 演进</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_7/">前端大厦的基石 --- AST</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_8/">浅谈前端优化的方向</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/M_Program/program_1/">项目</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/M_Program/program_1/">数据可视化项目</a></li>
+								
+									<li class="nav-item "><a href="/M_Program/program_2/">新零售会员通 -- 天猫 有赞 微信会员渠道打通项目</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!-- <h2>前端杂谈</h2> -->
+				<h3>前端部署的发展历程</h3>
+			</div>
+			<article class="content">
+				<!-- # 前端部署的发展历程 -->
+
+<p>前端一说起刀耕火种，那肯定紧随着前端工程化这一话题。随着 <code class="highlighter-rouge">react</code>/<code class="highlighter-rouge">vue</code>/<code class="highlighter-rouge">angular</code>，<code class="highlighter-rouge">es6+</code>，<code class="highlighter-rouge">webpack</code>，<code class="highlighter-rouge">babel</code>，<code class="highlighter-rouge">typescript</code> 以及 <code class="highlighter-rouge">node</code> 的发展，前端已经在逐渐替代过去 <code class="highlighter-rouge">script</code> 引 <code class="highlighter-rouge">cdn</code> 开发的方式了，掀起了工程化这一大浪潮。得益于工程化的发展与开源社区的良好生态，前端应用的可用性与效率得到了很大提高。</p>
+
+<p>前端以前是刀耕火种，那前端应用部署在以前也是刀耕火种。那前端应用部署的发展得益于什么，随前端工程化带来的副产品？</p>
+
+<p>这只是一部分，而更重要的原因是 <code class="highlighter-rouge">devops</code> 的崛起。</p>
+
+<p>为了更清晰地理解前端部署的发展史，了解部署时运维和前端（或者更广泛地说，业务开发人员）的职责划分，当每次前端部署发生改变时，可以思考两个问题</p>
+
+<ol>
+  <li>缓存，前端应用中http 的 <code class="highlighter-rouge">response header</code> 由谁来配？得益于工程化发展，可以对打包后得到带有 hash 值的文件可以做永久缓存</li>
+  <li>跨域，<code class="highlighter-rouge">/api</code> 的代理配置由谁来配？在开发环境前端可以开个小服务，启用 <code class="highlighter-rouge">webpack-dev-server</code> 配置跨域，那生产环境呢</li>
+</ol>
+
+<p>这两个问题都是前端面试时的高频问题，但话语权是否掌握在前端手里</p>
+
+<p>时间来到 <code class="highlighter-rouge">React</code> 刚刚发展起来的这一年，这时已经使用 <code class="highlighter-rouge">React</code> 开发应用，使用 <code class="highlighter-rouge">webpack</code> 来打包。但是前端部署，仍是刀耕火种</p>
+
+<blockquote>
+  <p>本篇文章要求你有一定的 Docker，DevOps 以及前端工程化的知识储备。
+<!-- 如果没有的话，本系列文章以及 [个人服务器运维指南](https://github.com/shfshanyue/blog#%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97) 中的 Docker 部分会对你有所帮助。 --></p>
+</blockquote>
+
+<h2 id="刀耕火种">刀耕火种</h2>
+
+<p>一台跳板机</p>
+
+<p>一台生产环境服务器</p>
+
+<p>一份部署脚本</p>
+
+<p>前端调着他的 <code class="highlighter-rouge">webpack</code>，开心地给运维发了部署邮件并附了一份部署脚本，想着第一次不用套后端的模板，第一次前端可以独立部署。想着自己基础盘进一步扩大，前端不禁开心地笑了</p>
+
+<p>运维照着着前端发过来的部署邮件，一遍又一遍地拉着代码，改着配置，写着 <code class="highlighter-rouge">try_files</code>， 配着 <code class="highlighter-rouge">proxy_pass</code>。</p>
+
+<p>这时候，前端静态文件由 <code class="highlighter-rouge">nginx</code> 托管，<code class="highlighter-rouge">nginx</code> 配置文件大致长这个样子</p>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">shanyue.tech</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+    <span class="c1"># 避免非root路径404
+</span>    <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri</span><span class="n">/</span> <span class="n">/index.html</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1"># 解决跨域
+</span>  <span class="kn">location</span> <span class="n">/api</span> <span class="p">{</span>
+    <span class="kn">proxy_pass</span> <span class="s">http://api.shanyue.tech</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1"># 为带 hash 值的文件配置永久缓存
+</span>  <span class="kn">location</span> <span class="p">~</span><span class="sr">*</span> <span class="err">\</span><span class="s">.(?:css|js)</span>$ <span class="p">{</span>
+      <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+      <span class="kn">expires</span> <span class="s">1y</span><span class="p">;</span>
+      <span class="kn">add_header</span> <span class="s">Cache-Control</span> <span class="s">"public"</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="p">~</span> <span class="sr">^.+\..+$</span> <span class="p">{</span>
+      <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>不过…经常有时候跑不起来</p>
+
+<p>运维抱怨着前端的部署脚本没有标好 <code class="highlighter-rouge">node</code> 版本，前端嚷嚷着测试环境没问题</p>
+
+<p>这个时候运维需要费很多心力放在部署上，甚至测试环境的部署上，前端也要费很多心力放在运维如何部署上。这个时候由于怕影响线上环境，上线往往选择在深夜，前端和运维身心俱疲</p>
+
+<p>不过向来如此</p>
+
+<p>鲁迅说，向来如此，那便对么。</p>
+
+<p><strong>这个时候，无论跨域的配置还是缓存的配置，都是运维来管理，运维不懂前端。但配置方式却是前端在提供，而前端并不熟悉 nginx</strong></p>
+
+<h2 id="使用-docker-构建镜像">使用 docker 构建镜像</h2>
+
+<p><code class="highlighter-rouge">docker</code> 的引进，很大程度地解决了部署脚本跑不了这个大BUG。<strong><code class="highlighter-rouge">dockerfile</code> 即部署脚本，部署脚本即 <code class="highlighter-rouge">dockerfile</code></strong>。这也很大程度缓解了前端与运维的摩擦，毕竟前端越来越靠谱了，至少部署脚本没有问题了 (笑</p>
+
+<p>这时候，前端不再提供静态资源，而是提供服务，一个 <code class="highlighter-rouge">http</code> 服务</p>
+
+<p>前端写的 <code class="highlighter-rouge">dockerfile</code> 大致长这个样子</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:alpine</span>
+
+<span class="c"># 代表生产环境</span>
+<span class="k">ENV</span><span class="s"> PROJECT_ENV production</span>
+<span class="c"># 许多 package 会根据此环境变量，做出不同的行为</span>
+<span class="c"># 另外，在 webpack 中打包也会根据此环境变量做出优化，但是 create-react-app 在打包时会写死该环境变量</span>
+<span class="k">ENV</span><span class="s"> NODE_ENV production</span>
+<span class="k">WORKDIR</span><span class="s"> /code</span>
+<span class="k">ADD</span><span class="s"> . /code</span>
+<span class="k">RUN </span>npm <span class="nb">install</span> <span class="o">&amp;&amp;</span> npm run build <span class="o">&amp;&amp;</span> npm <span class="nb">install</span> <span class="nt">-g</span> http-server
+<span class="k">EXPOSE</span><span class="s"> 80</span>
+
+<span class="k">CMD</span><span class="s"> http-server ./public -p 80</span>
+</code></pre></div></div>
+
+<p>单单有 <code class="highlighter-rouge">dockerfile</code> 也跑不起来，另外前端也开始维护一个 <code class="highlighter-rouge">docker-compose.yaml</code>，交给运维执行命令 <code class="highlighter-rouge">docker-compose up -d</code> 启动前端应用。前端第一次写 <code class="highlighter-rouge">dockerfile</code> 与 <code class="highlighter-rouge">docker-compose.yaml</code>，在部署流程中扮演的角色越来越重要。想着自己基础盘进一步扩大，前端又不禁开心地笑了</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3"</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">shici</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+    <span class="na">expose</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">80</span>
+</code></pre></div></div>
+
+<p>运维的 <code class="highlighter-rouge">nginx</code> 配置文件大致长这个样子</p>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">shanyue.tech</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+    <span class="kn">proxy_pass</span> <span class="s">http://static.shanyue.tech</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="n">/api</span> <span class="p">{</span>
+    <span class="kn">proxy_pass</span> <span class="s">http://api.shanyue.tech</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>运维除了配置 <code class="highlighter-rouge">nginx</code> 之外，还要执行一个命令: <code class="highlighter-rouge">docker-compose up -d</code></p>
+
+<p>这时候再思考文章最前面两个问题</p>
+
+<ol>
+  <li>缓存，由于从静态文件转换为服务，缓存开始交由前端控制 (但是镜像中的 <code class="highlighter-rouge">http-server</code> 不太适合做这件事情)</li>
+  <li>跨域，跨域仍由运维在 <code class="highlighter-rouge">nginx</code> 中配置</li>
+</ol>
+
+<p>前端可以做他应该做的事情中的一部分了，这是一件令人开心的事情</p>
+
+<p>当然，前端对于 <code class="highlighter-rouge">dockerfile</code> 的改进也是一个慢慢演进的过程，那这个时候镜像有什么问题呢？</p>
+
+<ol>
+  <li>构建镜像体积过大</li>
+  <li>构建镜像时间过长</li>
+</ol>
+
+<h2 id="使用多阶段构建优化镜像">使用多阶段构建优化镜像</h2>
+
+<p>这中间其实经历了不少坎坷，其中过程如何，详见我的另一篇文章: <a href="https://juejin.im/post/5c83cbaa6fb9a04a0f65fdaa">如何使用 docker 部署前端应用</a>。</p>
+
+<p>其中主要的优化也是在上述所提到的两个方面</p>
+
+<ol>
+  <li>构建镜像体积由 1G+ 变为 10M+</li>
+  <li>构建镜像时间由 5min+ 变为 1min (视项目复杂程度，大部分时间在构建时间与上传静态资源时间)</li>
+</ol>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:alpine as builder</span>
+
+<span class="k">ENV</span><span class="s"> PROJECT_ENV production</span>
+<span class="k">ENV</span><span class="s"> NODE_ENV production</span>
+
+<span class="k">WORKDIR</span><span class="s"> /code</span>
+
+<span class="k">ADD</span><span class="s"> package.json /code</span>
+<span class="k">RUN </span>npm <span class="nb">install</span> <span class="nt">--production</span>
+
+<span class="k">ADD</span><span class="s"> . /code</span>
+
+<span class="c"># npm run uploadCdn 是把静态资源上传至 oss 上的脚本文件，将来会使用 cdn 对 oss 加速</span>
+<span class="k">RUN </span>npm run build <span class="o">&amp;&amp;</span> npm run uploadCdn
+
+<span class="c"># 选择更小体积的基础镜像</span>
+<span class="k">FROM</span><span class="s"> nginx:alpine</span>
+<span class="k">COPY</span><span class="s"> --from=builder code/public/index.html code/public/favicon.ico /usr/share/nginx/html/</span>
+<span class="k">COPY</span><span class="s"> --from=builder code/public/static /usr/share/nginx/html/static</span>
+</code></pre></div></div>
+
+<p>那它怎么做的</p>
+
+<ol>
+  <li>先 <code class="highlighter-rouge">ADD package.json /code</code>, 再 <code class="highlighter-rouge">npm install --production</code> 之后 <code class="highlighter-rouge">Add</code> 所有文件。充分利用镜像缓存，减少构建时间</li>
+  <li>多阶段构建，大大减小镜像体积</li>
+</ol>
+
+<p>另外还可以有一些小优化，如</p>
+
+<ul>
+  <li><code class="highlighter-rouge">npm cache</code> 的基础镜像或者 <code class="highlighter-rouge">npm</code> 私有仓库，减少 <code class="highlighter-rouge">npm install</code> 时间，减小构建时间</li>
+  <li><code class="highlighter-rouge">npm install --production</code> 只装必要的包</li>
+</ul>
+
+<p>前端看着自己优化的 <code class="highlighter-rouge">dockerfile</code>，想着前几天还被运维吵，说什么磁盘一半的空间都被前端的镜像给占了，想着自己节省了前端镜像几个数量级的体积，为公司好像省了不少服务器的开销，想着自己的基础盘进一步扩大，又不禁开心的笑了</p>
+
+<p>这时候再思考文章最前面两个问题</p>
+
+<ol>
+  <li>缓存，缓存由前端控制，缓存在oss上设置，将会使用 cdn 对 oss 加速。此时缓存由前端写脚本控制</li>
+  <li>跨域，跨域仍由运维在 <code class="highlighter-rouge">nginx</code> 中配置</li>
+</ol>
+
+<h2 id="cicd-与-gitlab">CI/CD 与 gitlab</h2>
+
+<p>此时前端成就感爆棚，运维呢？运维还在一遍一遍地上线，重复着一遍又一遍的三个动作用来部署</p>
+
+<ol>
+  <li>拉代码</li>
+  <li><code class="highlighter-rouge">docker-compose up -d</code></li>
+  <li>重启 nginx</li>
+</ol>
+
+<p>运维觉得再也不能这么下去了，于是他引进了 <code class="highlighter-rouge">CI</code>: 与现有代码仓库 <code class="highlighter-rouge">gitlab</code> 配套的 <code class="highlighter-rouge">gitlab ci</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">CI</code>，<code class="highlighter-rouge">Continuous Integration</code>，持续集成</li>
+  <li><code class="highlighter-rouge">CD</code>，<code class="highlighter-rouge">Continuous Delivery</code>，持续交付</li>
+</ul>
+
+<p>重要的不是 <code class="highlighter-rouge">CI/CD</code> 是什么，重要的是现在运维不用跟着业务上线走了，不需要一直盯着前端部署了。这些都是 <code class="highlighter-rouge">CI/CD</code> 的事情了，它被用来做自动化部署。上述提到的三件事交给了 <code class="highlighter-rouge">CI/CD</code></p>
+
+<p><code class="highlighter-rouge">.gitlab-ci.yml</code> 是 <code class="highlighter-rouge">gitlab</code> 的 CI 配置文件，它大概长这个样子</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">deploy</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">master</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">docker-compose up --build -d</span>
+  <span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">shell</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">CI/CD</code> 不仅仅更解放了业务项目的部署，也在交付之前大大加强了业务代码的质量，它可以用来 <code class="highlighter-rouge">lint</code>，<code class="highlighter-rouge">test</code>，<code class="highlighter-rouge">package</code> 安全检查，甚至多特性多环境部署，我将会在我以后的文章写这部分事情</p>
+
+<p>我的一个服务器渲染项目 <a href="https://github.com/shfshanyue/shici">shfshanyue/shici</a> 以前在我的服务器中就是以 <code class="highlighter-rouge">docker</code>/<code class="highlighter-rouge">docker-compose/gitlab-ci</code> 的方式部署，有兴趣的可以看看它的配置文件</p>
+
+<ul>
+  <li><a href="https://github.com/shfshanyue/shici/blob/master/Dockerfile">shfshanyue/shici:Dockerfile</a></li>
+  <li><a href="https://github.com/shfshanyue/shici/blob/master/docker-compose.yml">shfshanyue/shici:docker-compose.yml</a></li>
+  <li><a href="https://github.com/shfshanyue/shici/blob/master/.gitlab-ci.yml">shfshanyue/shici:gitlab-ci.yml</a></li>
+</ul>
+
+<p>如果你有个人服务器的话，也建议你做一个自己感兴趣的前端应用和配套的后端接口服务，并且配套 <code class="highlighter-rouge">CI/CD</code> 把它部署在自己的自己服务器上</p>
+
+<p>而你如果希望结合 <code class="highlighter-rouge">github</code> 做 <code class="highlighter-rouge">CI/CD</code>，那可以试一试 <code class="highlighter-rouge">github</code> + <code class="highlighter-rouge">github action</code></p>
+
+<p>另外，也可以试试 <code class="highlighter-rouge">drone.ci</code>，如何部署可以参考我以前的文章: <a href="https://juejin.im/post/5dc0b563f265da4cef190b8a">github 上持续集成方案 drone 的简介及部署</a></p>
+
+<h2 id="使用-kubernetes-部署">使用 kubernetes 部署</h2>
+
+<p>随着业务越来越大，镜像越来越多，<code class="highlighter-rouge">docker-compose</code> 已经不太能应付，<code class="highlighter-rouge">kubernetes</code> 应时而出。这时服务器也从1台变成了多台，多台服务器就会有分布式问题</p>
+
+<p><strong>一门新技术的出现，在解决以前问题的同时也会引进复杂性。</strong></p>
+
+<p>k8s 部署的好处很明显: 健康检查，滚动升级，弹性扩容，快速回滚，资源限制，完善的监控等等</p>
+
+<p>那现在遇到的新问题是什么？</p>
+
+<p><strong>构建镜像的服务器，提供容器服务的服务器，做持续集成的服务器是一台！</strong></p>
+
+<p>需要一个私有的镜像仓库，这是运维的事情，<code class="highlighter-rouge">harbor</code> 很快就被运维搭建好了，但是对于前端部署来说，复杂性又提高了</p>
+
+<p>先来看看以前的流程:</p>
+
+<ol>
+  <li>前端配置 <code class="highlighter-rouge">dockerfile</code> 与 <code class="highlighter-rouge">docker-compose</code></li>
+  <li>生产环境服务器的 <code class="highlighter-rouge">CI runner</code> 拉代码(可以看做以前的运维)，<code class="highlighter-rouge">docker-compose up -d</code> 启动服务。然后再重启 <code class="highlighter-rouge">nginx</code>，做反向代理，对外提供服务</li>
+</ol>
+
+<p>以前的流程有一个问题: <strong>构建镜像的服务器，提供容器服务的服务器，做持续集成的服务器是一台！</strong>，所以需要一个私有的镜像仓库，一个能够访问 <code class="highlighter-rouge">k8s</code> 集群的持续集成服务器</p>
+
+<p>流程改进之后结合 <code class="highlighter-rouge">k8s</code> 的流程如下</p>
+
+<ol>
+  <li>前端配置 <code class="highlighter-rouge">dockerfile</code>，构建镜像，推到镜像仓库</li>
+  <li>运维为前端应用配置 <code class="highlighter-rouge">k8s</code> 的资源配置文件，<code class="highlighter-rouge">kubectl apply -f</code> 时会重新拉取镜像，部署资源</li>
+</ol>
+
+<p>运维问前端，需不需要再扩大下你的基础盘，写一写前端的 <code class="highlighter-rouge">k8s</code> 资源配置文件，并且列了几篇文章</p>
+
+<ul>
+  <li><a href="https://juejin.im/post/5db8c2b46fb9a020256692dc">使用 k8s 部署你的第一个应用: Pod，Deployment 与 Service</a></li>
+  <li><a href="https://juejin.im/post/5db8da4b6fb9a0204520b310">使用 k8s 为你的应用配置域名: Ingress</a></li>
+  <li><a href="https://juejin.im/post/5db8d94be51d4529f73e2833">使用 k8s 为你的域名加上 https</a></li>
+</ul>
+
+<p>前端看了看后端十几个 k8s 配置文件之后，摇摇头说算了算了</p>
+
+<p>这个时候，<code class="highlighter-rouge">gitlab-ci.yaml</code> 差不多长这个样子，配置文件的权限由运维一人管理</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">deploy</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">master</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">docker build -t harbor.shanyue.tech/fe/shanyue</span>
+    <span class="pi">-</span> <span class="s">docker push harbor.shanyue.tech/fe/shanyue</span>
+    <span class="pi">-</span> <span class="s">kubectl apply -f https://k8s-config.default.svc.cluster.local/shanyue.yaml</span>
+  <span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">shell</span>
+</code></pre></div></div>
+
+<p>这时候再思考文章最前面两个问题</p>
+
+<ol>
+  <li>缓存，缓存由前端控制</li>
+  <li>跨域，跨域仍由运维控制，在后端 <code class="highlighter-rouge">k8s</code> 资源的配置文件中控制 <code class="highlighter-rouge">Ingress</code></li>
+</ol>
+
+<h2 id="使用-helm-部署">使用 helm 部署</h2>
+
+<p>这时前端与运维已不太往来，除了偶尔新起项目需要运维帮个忙以外</p>
+
+<p>但好景不长，突然有一天，前端发现自己连个环境变量都没法传！于是经常找运维修改配置文件，运维也不胜其烦</p>
+
+<p>于是有了 <code class="highlighter-rouge">helm</code>，如果用一句话解释它，那它就是一个带有模板功能的 <code class="highlighter-rouge">k8s</code> 资源配置文件。作为前端，你只需要填参数。更多详细的内容可以参考我以前的文章 <a href="https://juejin.im/post/5dbf7909f265da4d4b5fe7b4">使用 helm 部署 k8s 资源</a></p>
+
+<p>假如我们使用 <a href="https://hub.helm.sh/charts/bitnami/nginx">bitnami/nginx</a> 作为 <code class="highlighter-rouge">helm chart</code>，前端可能写的配置文件长这个样子</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">image</span><span class="pi">:</span>
+  <span class="na">registry</span><span class="pi">:</span> <span class="s">harbor.shanyue.tech</span>
+  <span class="na">repository</span><span class="pi">:</span> <span class="s">fe/shanyue</span>
+  <span class="na">tag</span><span class="pi">:</span> <span class="s">8a9ac0</span>
+
+<span class="na">ingress</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">hosts</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">shanyue.tech</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+
+  <span class="na">tls</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">shanyue.tech</span>
+    <span class="na">secretName</span><span class="pi">:</span> <span class="s">shanyue-tls</span>
+
+    <span class="c1"># livenessProbe:</span>
+    <span class="c1">#   httpGet:</span>
+    <span class="c1">#     path: /</span>
+    <span class="c1">#     port: http</span>
+    <span class="c1">#   initialDelaySeconds: 30</span>
+    <span class="c1">#   timeoutSeconds: 5</span>
+    <span class="c1">#   failureThreshold: 6</span>
+    <span class="c1">#</span>
+    <span class="c1"># readinessProbe:</span>
+    <span class="c1">#   httpGet:</span>
+    <span class="c1">#     path: /</span>
+    <span class="c1">#     port: http</span>
+    <span class="c1">#   initialDelaySeconds: 5</span>
+    <span class="c1">#   timeoutSeconds: 3</span>
+    <span class="c1">#   periodSeconds: 5</span>
+</code></pre></div></div>
+
+<p>这时候再思考文章最前面两个问题</p>
+
+<ol>
+  <li>缓存，缓存由前端控制</li>
+  <li>跨域，跨域由后端控制，配置在后端 Chart 的配置文件 <code class="highlighter-rouge">values.yaml</code> 中</li>
+</ol>
+
+<p>到了这时前端和运维的职责所在呢？</p>
+
+<p>前端需要做的事情有:</p>
+
+<ol>
+  <li>写前端构建的 <code class="highlighter-rouge">dockerfile</code>，这只是一次性的工作，而且有了参考</li>
+  <li>使用 <code class="highlighter-rouge">helm</code> 部署时指定参数</li>
+</ol>
+
+<p>那运维要做的事情呢</p>
+
+<ol>
+  <li>提供一个供所有前端项目使用的 <code class="highlighter-rouge">helm chart</code>，甚至不用提供，如果运维比较懒那就就使用 <a href="https://hub.helm.sh/charts/bitnami/nginx">bitnami/nginx</a> 吧。也是一次性工作</li>
+  <li>提供一个基于 <code class="highlighter-rouge">helm</code> 的工具，禁止业务过多的权限，甚至不用提供，如果运维比较懒那就直接使用 <code class="highlighter-rouge">helm</code></li>
+</ol>
+
+<p>这时前端可以关注于自己的业务，运维可以关注于自己的云原生，职责划分从未这般清楚</p>
+
+<h2 id="统一前端部署平台">统一前端部署平台</h2>
+
+<p>后来运维觉得前端应用的本质是一堆静态文件，较为单一，容易统一化，来避免各个前端镜像质量的参差不齐。于是运维准备了一个统一的 <code class="highlighter-rouge">node</code> 基础镜像，做了一个前端统一部署平台，而这个平台可以做什么呢</p>
+
+<ol>
+  <li><code class="highlighter-rouge">CI/CD</code>: 当你 push 代码到仓库的特定分支会自动部署</li>
+  <li><code class="highlighter-rouge">http headers</code>: 你可以定制资源的 <code class="highlighter-rouge">http header</code>，从而可以做<strong>缓存优化</strong>等</li>
+  <li><code class="highlighter-rouge">http redirect/rewrite</code>: 如果一个 <code class="highlighter-rouge">nginx</code>，这样可以配置 <code class="highlighter-rouge">/api</code>，解决跨域问题</li>
+  <li><code class="highlighter-rouge">hostname</code>: 你可以设置域名</li>
+  <li><code class="highlighter-rouge">CDN</code>: 把你的静态资源推到 CDN</li>
+  <li><code class="highlighter-rouge">https</code>: 为你准备证书</li>
+  <li><code class="highlighter-rouge">Prerender</code>: 结合 <code class="highlighter-rouge">SPA</code>，做预渲染</li>
+</ol>
+
+<p>前端再也不需要构建镜像，上传 CDN 了，他只需要写一份配置文件就可以了，大致长这个样子</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">build</span><span class="pi">:</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">npm run build</span>
+  <span class="na">dist</span><span class="pi">:</span> <span class="s">/dist</span>
+
+<span class="na">hosts</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">shanyue.tech</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+
+<span class="na">headers</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">location</span><span class="pi">:</span> <span class="s">/*</span>
+  <span class="na">values</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">cache-control</span><span class="pi">:</span> <span class="s">max-age=7200</span>
+<span class="pi">-</span> <span class="na">location</span><span class="pi">:</span> <span class="s">assets/*</span>
+  <span class="na">values</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">cache-control</span><span class="pi">:</span> <span class="s">max-age=31536000</span>
+
+<span class="na">redirects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">from </span><span class="pi">:</span> <span class="s">/api</span>
+  <span class="na">to</span><span class="pi">:</span> <span class="s">https://api.shanyue.tech</span>
+  <span class="na">status</span><span class="pi">:</span> <span class="s">200</span>
+</code></pre></div></div>
+
+<p>此时，前端只需要写一份配置文件，就可以配置缓存，配置 <code class="highlighter-rouge">proxy</code>，做应该属于前端做的一切，而运维也再也不需要操心前端部署的事情了</p>
+
+<p>前端看着自己刚刚写好的配置文件，怅然若失的样子…</p>
+
+<p>不过一般只有大厂会有这么完善的前端部署平台，如果你对它有兴趣，你可以尝试下 <code class="highlighter-rouge">netlify</code>，可以参考我的文章: <a href="https://shanyue.tech/op/deploy-fe-with-netlify.html">使用 netlify 部署你的前端应用</a></p>
+
+<h2 id="服务端渲染与后端部署">服务端渲染与后端部署</h2>
+
+<p>大部分前端应用本质上是静态资源，剩下的少部分就是服务端渲染了，服务端渲染的本质上是一个后端服务，它的部署可以视为后端部署</p>
+
+<p>后端部署的情况更为复杂，比如</p>
+
+<ol>
+  <li>配置服务，后端需要访问敏感数据，但又不能把敏感数据放在代码仓库。你可以在 <code class="highlighter-rouge">environment variables</code>， <code class="highlighter-rouge">consul</code> 或者 <code class="highlighter-rouge">k8s configmap</code> 中维护</li>
+  <li>上下链路服务，你需要依赖数据库，上游服务</li>
+  <li>访问控制，限制 IP，黑白名单</li>
+  <li>RateLimit</li>
+  <li>等等</li>
+</ol>
+
+<p>我将在以后的文章分享如何在 k8s 中部署一个后端</p>
+
+<h2 id="小结">小结</h2>
+
+<p>随着 <code class="highlighter-rouge">devops</code> 的发展，前端部署越来越简单，可控性也越来越高，建议所有人都稍微学习一下 <code class="highlighter-rouge">devops</code> 的东西。</p>
+
+<p>道阻且长，行则将至。</p>
+
+<p>参考：https://github.com/shfshanyue/blog/edit/master/frontend-engineering/deploy.md</p>
+
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+			document.getElementById("backtop").addEventListener("click", function () {
+				document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+			});
+
+		</script>
+	</body>
+</html>
