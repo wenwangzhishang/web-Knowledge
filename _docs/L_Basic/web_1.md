@@ -62,7 +62,10 @@ CSSOM会阻塞渲染，只有当CSSOM构建完毕后才会进入下一个阶段�
 
 
 
-  参考：https://juejin.cn/post/6844903815758479374
+  参考：
+  https://juejin.cn/post/6844903815758479374   
+  https://www.cnblogs.com/JerryChan31/p/9631934.html
+
 
 
 
