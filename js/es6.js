@@ -34,11 +34,40 @@ const map = new Map([
   ['name', '张三','test1'],
   ['title', 'Author','tes3']
 ]);
-console.log(map)
+// console.log(map)
 map.size // 2
 map.has('name') // true
 map.get('name') // "张三"
 map.has('title') // true
 map.get('title') // "Author"
-console.log(map.get('name'))
-console.log(map.get('title'))
+// console.log(map.get('name'))
+// console.log(map.get('title'))
+
+// function test(a){
+//   console.log(a)
+//   let sum = a
+//   let fn = function(b){
+//     sum  += b 
+//     return fn
+//   }
+//   fn.toString = function(){
+//     return sum
+//   }
+//   return fn
+// }
+function test(a){
+  console.log(a)
+  let sum = a
+  let fn = function(b){
+    sum  += b 
+    return fn
+  }
+  fn.toString = function(){
+    return sum
+  }
+  return fn
+}
+
+
+
+console.log(test(1))
