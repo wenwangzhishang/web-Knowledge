@@ -23,6 +23,10 @@ order: 3
 
 > 3. 在package.json文件中 在 build 后面加上一个 --report
    "build": "vue-cli-service build --report"
+
+
+优化的方向和思想
+1、查看完代码分析，我们大概知道了。打包文件的大小是否合理。
    
 运行打包后，我们打开http://127.0.0.1:8888之后 就会看到一个可视化的 文件占比
 
