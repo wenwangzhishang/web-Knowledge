@@ -68,6 +68,19 @@ function test(a){
   return fn
 }
 
+/**
+ * 洋葱模型
+ */
+ function test1(a){
+  console.log(a)
+  let sum = a
+  let fn = function(b){
+    sum  += b 
+    return fn
+  }
+  return fn
+}
 
 
-console.log(test(1))
+
+console.log(test1(1)(2)(3))
