@@ -86,10 +86,34 @@
 					
 						<li class="nav-item top-level ">
 							
-							<a href="/C_Vue/documents/">Vue</a>
+							<a href="/B_Js/js_curry/">JS</a>
 							<ul>
 								
-									<li class="nav-item "><a href="/C_Vue/documents/">Vue2</a></li>
+									<li class="nav-item "><a href="/B_Js/js_curry/">函数柯里化</a></li>
+								
+									<li class="nav-item "><a href="/B_Js/js_eventloop/">js 事件执行机制</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/C_Vue/vue_1/">Vue</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/C_Vue/vue_1/">Vue2 迁移到 Vue3 都有哪些变化</a></li>
+								
+									<li class="nav-item "><a href="/C_Vue/vue_2/">Vue3 源码 (3.2)</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/D_Vite/vite_1/">Vite</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/D_Vite/vite_1/">Vite 基础</a></li>
 								
 							</ul>
 						</li>
@@ -173,6 +197,10 @@
 								
 									<li class="nav-item "><a href="/L_Basic/web_8/">浅谈前端优化的方向</a></li>
 								
+									<li class="nav-item "><a href="/L_Basic/web_9/">浏览器内存泄漏</a></li>
+								
+									<li class="nav-item "><a href="/L_Basic/web_10/">浏览器储存（cookie、localStorage、sessionStorage和IndexDB）</a></li>
+								
 							</ul>
 						</li>
 					
@@ -184,6 +212,18 @@
 									<li class="nav-item "><a href="/M_Program/program_1/">数据可视化项目</a></li>
 								
 									<li class="nav-item "><a href="/M_Program/program_2/">新零售会员通 -- 天猫 有赞 微信会员渠道打通项目</a></li>
+								
+									<li class="nav-item "><a href="/M_Program/program_3/">温顾知新</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/N_math/math_1/">算法</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/N_math/math_1/">动态规划</a></li>
 								
 							</ul>
 						</li>
@@ -284,12 +324,80 @@
 					,
 					
 
-					"c-vue-documents": {
-						"id": "c-vue-documents",
-						"title": "Vue2",
+					"b-js-js-curry": {
+						"id": "b-js-js-curry",
+						"title": "函数柯里化",
 						"category": "",
-						"url": " /C_Vue/documents/",
-						"content": "Share documents with your friends! Send work or school projects from your computer or phone. To share a document: Open a message with someone Select the Send Media button Pick a document Changes made to documents after sending are not saved back, you’ll have to get contacts to send you updated versions."
+						"url": " /B_Js/js_curry/",
+						"content": "export、export default 和 module.export的异同"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"b-js-js-eventloop": {
+						"id": "b-js-js-eventloop",
+						"title": "js 事件执行机制",
+						"category": "",
+						"url": " /B_Js/js_eventloop/",
+						"content": ""
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"c-vue-vue-1": {
+						"id": "c-vue-vue-1",
+						"title": "Vue2 迁移到 Vue3 都有哪些变化",
+						"category": "",
+						"url": " /C_Vue/vue_1/",
+						"content": "根据Vue 的一整套方案 我们来逐步分析下 Vue 先简单聊一下比较重大且根本性的变化—但是对于开发影响不是很大的变化 一、proxy 二、typescript 替换 flow 三、 diff 算法的改变 对开发相对来说比较大的已有的 影响大且之前没有的 —- composition API 描述在Mixin中的一段话 在 Vue 2 中，mixin 是将部分组件逻辑抽象成可重用块的主要工具。但是，他们有几个问题： Mixin 很容易发生冲突：因为每个 mixin 的 property 都被合并到同一个组件中，所以为了避免 property 名冲突，你仍然需要了解其他每个特性。 可重用性是有限的：我们不能向 mixin 传递任何参数来改变它的逻辑，这降低了它们在抽象逻辑方面的灵活性。 为了解决这些问题，我们添加了一种通过逻辑关注点组织代码的新方法：组合式 API。 非兼容的变更 新特性 这里主要强调一下， 单文件组合式API 语法糖，这个特性目前在实验阶段，但是用起来确实很舒适。 Teleport 事件机制 原有事件机制改变 在 Vue 3 中，已经不可能使用这些 API 从组件内部监听组件自己发出的事件了，该用例暂没有迁移的方法。 生命周期变动 但是该 eventHub 模式可以被替换为实现了事件触发器接口的外部库，例如 mitt 或 tiny-emitter。 2.X 语法 2.x 版本中在一个元素上同时使用 v-if 和 v-for 时，v-for 会优先作用。 3.X 语法 3.x 版本中 v-if 总是优先于 v-for 生效。 监听数组的变化 当使用 watch 选项侦听数组时，只有在数组被替换时才会触发回调。换句话说，在数组改变时 watch 回调将不再被触发。要想在数组改变时触发 watch 回调，必须指定 deep 选项。 响应性基础 API setup 生命周期对照 首先需要了解的是响应式API对应的生命周期钩子 setup 的生命周期跟 Vue 的生命周期 会有差异。如 1.setup 的钩子函数 写几次就执行几次。 2、Vue 的钩子函数是无论写几次。只执行最后一次。 mounted(){ console.log('mo') }, mounted(){ console.log('mo1') }, updated(){ console.log('up') }, updated(){ console.log('up2') } 打印结果 unmounted! HelloWorld.vue:27 mounted! HelloWorld.vue:30 mounted2! HelloWorld.vue:65 mo1 ！！！创建自定义组件实例的时候，propsData 改变 ！！！自定义组件时，插槽统一了 watchEffect 函数式组件 Vuex Vue-Router 参考： Vue 迁移指南 Vuex 迁移指南 Vue-router Vue Cli"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"c-vue-vue-2": {
+						"id": "c-vue-vue-2",
+						"title": "Vue3 源码 (3.2)",
+						"category": "",
+						"url": " /C_Vue/vue_2/",
+						"content": "学习地址 compiler-core compiler-dom compiler-sfc compiler-ssr reactivity runtime-core runtime-dom runtime-test server-renderer sfc-playground shared size-check template-explorer vue global.d.ts"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"d-vite-vite-1": {
+						"id": "d-vite-vite-1",
+						"title": "Vite 基础",
+						"category": "",
+						"url": " /D_Vite/vite_1/",
+						"content": ""
 					}
 
 					
@@ -340,7 +448,7 @@
 						"title": "前端如何利用Webpack进行代码分析和优化",
 						"category": "",
 						"url": " /D_Webpack/webpack_3/",
-						"content": "一、1. 执行以下命令安装 npm install webpack-bundle-analyzer –save-dev vue.config.js 配置 chainWebpack: config =&gt; { 查看打包文件体积大小 config .plugin('webpack-bundle-analyzer') .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin) } 在package.json文件中 在 build 后面加上一个 –report “build”: “vue-cli-service build –report” 运行打包后，我们打开http: 127.0.0.1:8888之后 就会看到一个可视化的 文件占比"
+						"content": "一、1. 执行以下命令安装 npm install webpack-bundle-analyzer –save-dev vue.config.js 配置 chainWebpack: config =&gt; { 查看打包文件体积大小 config .plugin('webpack-bundle-analyzer') .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin) } 在package.json文件中 在 build 后面加上一个 –report “build”: “vue-cli-service build –report” 优化的方向和思想 1、查看完代码分析，我们大概知道了。打包文件的大小是否合理。 运行打包后，我们打开http: 127.0.0.1:8888之后 就会看到一个可视化的 文件占比"
 					}
 
 					
@@ -459,7 +567,24 @@
 						"title": "浏览器的渲染机制",
 						"category": "",
 						"url": " /L_Basic/web_1/",
-						"content": "浏览器的内核是指支持浏览器运行的最核心的程序，分为两个部分的，一是渲染引擎，另一个是JS引擎。渲染引擎在不同的浏览器中也不是都相同的。目前市面上常见的浏览器内核可以分为这四种：Trident（IE）、Gecko（火狐）、Blink（Chrome、Opera）、Webkit（Safari）。 浏览器从输入url开始 这里只做简述，如想详细了解可以参考我另一篇文章 要点如下： 浏览器根据 DNS 服务器得到域名的 IP 地址 向这个 IP 的机器发送 HTTP 请求 服务器收到、处理并返回 HTTP 请求 浏览器得到返回内容 这里重点讲述 浏览器返回之后的内容 其实就是一堆 HMTL 格式的字符串，因为只有 HTML 格式浏览器才能正确解析，这是 W3C 标准的要求。接下来就是浏览器的渲染过程。 一、浏览器会解析三个东西： 一是HTML SVG XHTML，HTML字符串描述了一个页面的结构，浏览器会把HTML结构字符串解析转换DOM树形结构 二是CSS，解析CSS会产生CSS规则树，它和DOM结构比较像。 三是Javascript脚本，等到Javascript 脚本文件加载后， 通过 DOM API 和 CSSOM API 来操作 DOM Tree 和 CSS Rule Tree。 二、解析完成后，浏览器引擎会通过DOM Tree 和 CSS Rule Tree 来构造 Rendering Tree。 Rendering Tree 渲染树并不等同于DOM树，渲染树只会包括需要显示的节点和这些节点的样式信息。 CSS 的 Rule Tree主要是为了完成匹配并把CSS Rule附加上Rendering Tree上的每个Element（也就是每个Frame）。 然后，计算每个Frame 的位置，这又叫layout和reflow过程 三、最后通过调用操作系统Native GUI的API绘制 二、 构建DOM 浏览器会遵守一套步骤将HTML 文件转换为 DOM 树。宏观上，可以分为几个步骤： 三、构建CSSOM 四、构建渲染树 五、布局与绘制 六、几点补充说明 性能优化策略 基于上面介绍的浏览器渲染原理，DOM 和 CSSOM 结构构建顺序，初始化可以对页面渲染做些优化，提升页面性能。 JS优化： defer属性： 用于开启新的线程下载脚本文件，并使脚本在文档解析完成后执行。 async属性： HTML5新增属性，用于异步下载脚本文件，下载完毕立即解释执行代码。 CSS优化： 标签的 rel属性 中的属性值设置为 preload 能够让你在你的HTML页面中可以指明哪些资源是在页面加载完成后即刻需要的,最优的配置加载顺序，提高渲染性能 总结 浏览器工作流程：构建DOM -&gt; 构建CSSOM -&gt; 构建渲染树 -&gt; 布局 -&gt; 绘制。 CSSOM会阻塞渲染，只有当CSSOM构建完毕后才会进入下一个阶段构建渲染树。 通常情况下DOM和CSSOM是并行构建的，但是当浏览器遇到一个不带defer或async属性的script标签时，DOM构建将暂停，如果此时又恰巧浏览器尚未完成CSSOM的下载和构建，由于JavaScript可以修改CSSOM，所以需要等CSSOM构建完毕后再执行JS，最后才重新DOM构建。 参考：https: juejin.cn post 6844903815758479374"
+						"content": "浏览器的内核是指支持浏览器运行的最核心的程序，分为两个部分的，一是渲染引擎，另一个是JS引擎。渲染引擎在不同的浏览器中也不是都相同的。目前市面上常见的浏览器内核可以分为这四种：Trident（IE）、Gecko（火狐）、Blink（Chrome、Opera）、Webkit（Safari）。 浏览器从输入url开始 这里只做简述，如想详细了解可以参考我另一篇文章 要点如下： 浏览器根据 DNS 服务器得到域名的 IP 地址 向这个 IP 的机器发送 HTTP 请求 服务器收到、处理并返回 HTTP 请求 浏览器得到返回内容 这里重点讲述 浏览器返回之后的内容 其实就是一堆 HMTL 格式的字符串，因为只有 HTML 格式浏览器才能正确解析，这是 W3C 标准的要求。接下来就是浏览器的渲染过程。 一、浏览器会解析三个东西： 一是HTML SVG XHTML，HTML字符串描述了一个页面的结构，浏览器会把HTML结构字符串解析转换DOM树形结构 二是CSS，解析CSS会产生CSS规则树，它和DOM结构比较像。 三是Javascript脚本，等到Javascript 脚本文件加载后， 通过 DOM API 和 CSSOM API 来操作 DOM Tree 和 CSS Rule Tree。 二、解析完成后，浏览器引擎会通过DOM Tree 和 CSS Rule Tree 来构造 Rendering Tree。 Rendering Tree 渲染树并不等同于DOM树，渲染树只会包括需要显示的节点和这些节点的样式信息。 CSS 的 Rule Tree主要是为了完成匹配并把CSS Rule附加上Rendering Tree上的每个Element（也就是每个Frame）。 然后，计算每个Frame 的位置，这又叫layout和reflow过程 三、最后通过调用操作系统Native GUI的API绘制 二、 构建DOM 浏览器会遵守一套步骤将HTML 文件转换为 DOM 树。宏观上，可以分为几个步骤： 三、构建CSSOM 阻塞渲染的 CSS 默认情况下，CSS 被视为阻塞渲染的资源（但不阻塞html的解析），这意味着浏览器将不会渲染任何已处理的内容，直至 CSSOM 构建完毕。请务必精简CSS，尽快提供它，并利用媒体类型和查询来解除对渲染的阻塞，以缩短首屏的时间。 在渲染树构建中，要求同时具有 DOM 和 CSSOM 才能构建渲染树。这会给性能造成严重影响：HTML 和 CSS 都是阻塞渲染的资源。 HTML 显然是必需的，因为如果没有 DOM，就没有可渲染的内容，但 CSS 的必要性可能就不太明显。如果在 CSS 不阻塞渲染的情况下尝试渲染一个普通网页会怎样？ 默认情况下，CSS 被视为阻塞渲染的资源。 我们可以通过媒体类型和媒体查询将一些 CSS 资源标记为不阻塞渲染。 浏览器会下载所有 CSS 资源，无论阻塞还是不阻塞。 没有 CSS 的网页实际上无法使用。所以浏览器将阻塞渲染，直至 DOM 和 CSSOM 全都准备就绪。 CSS 是阻塞渲染的资源。需要将它尽早、尽快地下载到客户端，以便缩短首次渲染的时间。 如果有一些 CSS 样式只在特定条件下（例如显示网页或将网页投影到大型显示器上时）使用，又该如何？如果这些资源不阻塞渲染，该有多好。 可以通过 CSS“媒体类型”和“媒体查询”来解决这类情况： &lt;link href=\"style.css\" rel=\"stylesheet\"&gt; &lt;link href=\"print.css\" rel=\"stylesheet\" media=\"print\"&gt; &lt;link href=\"other.css\" rel=\"stylesheet\" media=\"(min-width: 40em)\"&gt; 媒体查询由媒体类型以及零个或多个检查特定媒体特征状况的表达式组成。例如，第一个样式表声明未提供任何媒体类型或查询，因此它适用于所有情况。也就是说它始终会阻塞渲染。第二个样式表则不然，它只在打印内容时适用---或许您想重新安排布局、更改字体等等，因此在网页首次加载时，该样式表不需要阻塞渲染。最后一个样式表声明提供了由浏览器执行的“媒体查询”：符合条件时，样式表会生效，浏览器将阻塞渲染，直至样式表下载并处理完毕。 通过使用媒体查询，我们可以根据特定用例（比如显示或打印），也可以根据动态情况（比如屏幕方向变化、尺寸调整事件等）定制外观。声明样式表时，请密切注意媒体类型和查询，因为它们将严重影响关键渲染路径的性能。 让我们考虑下面这些实例： &lt;link href=\"style.css\" rel=\"stylesheet\"&gt; &lt;link href=\"style.css\" rel=\"stylesheet\" media=\"all\"&gt; &lt;link href=\"portrait.css\" rel=\"stylesheet\" media=\"orientation:portrait\"&gt; &lt;link href=\"print.css\" rel=\"stylesheet\" media=\"print\"&gt; 第一个声明阻塞渲染，适用于所有情况。 第二个声明同样阻塞渲染：“all”是默认类型，和第一个声明实际上是等效的。 第三个声明具有动态媒体查询，将在网页加载时计算。根据网页加载时设备的方向，portrait.css 可能阻塞渲染，也可能不阻塞渲染。 最后一个声明只在打印网页时应用，因此网页在浏览器中加载时，不会阻塞渲染。 最后，“阻塞渲染”仅是指浏览器是否需要暂停网页的首次渲染，直至该资源准备就绪。无论媒寻是否命中，浏览器都会下载上述所有的CSS样式表，只不过不阻塞渲染的资源对当前媒体不生效罢了。 四、构建渲染树 五、布局与绘制 六、几点补充说明 性能优化策略 基于上面介绍的浏览器渲染原理，DOM 和 CSSOM 结构构建顺序，初始化可以对页面渲染做些优化，提升页面性能。 JS优化： defer属性： 用于开启新的线程下载脚本文件，并使脚本在文档解析完成后执行。 async属性： HTML5新增属性，用于异步下载脚本文件，下载完毕立即解释执行代码。 参考：https: segmentfault.com q 1010000000640869 CSS优化： 标签的 rel属性 中的属性值设置为 preload 能够让你在你的HTML页面中可以指明哪些资源是在页面加载完成后即刻需要的,最优的配置加载顺序，提高渲染性能 重绘（Paint） 和重排(Layout) 总结 浏览器工作流程：构建DOM -&gt; 构建CSSOM -&gt; 构建渲染树 -&gt; 布局 -&gt; 绘制。 CSSOM会阻塞渲染，只有当CSSOM构建完毕后才会进入下一个阶段构建渲染树。 通常情况下DOM和CSSOM是并行构建的，但是当浏览器遇到一个不带defer或async属性的script标签时，DOM构建将暂停，如果此时又恰巧浏览器尚未完成CSSOM的下载和构建，由于JavaScript可以修改CSSOM，所以需要等CSSOM构建完毕后再执行JS，最后才重新DOM构建。 浏览器在做性能测试的时候 lighthouse 以csdn 为例： 如果同时打开两个csdn 同源网站 会导致lighthouse 不能生成报告。 参考： https: juejin.cn post 6844903815758479374 https: www.cnblogs.com JerryChan31 p 9631934.html https: www.cnblogs.com kevin2chen p 6938021.html https: developer.mozilla.org zh-CN docs Web API Window DOMContentLoaded_event"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"l-basic-web-10": {
+						"id": "l-basic-web-10",
+						"title": "浏览器储存（cookie、localStorage、sessionStorage和IndexDB）",
+						"category": "",
+						"url": " /L_Basic/web_10/",
+						"content": "浏览器内存泄漏的原因 参考： https: blog.csdn.net muzidigbig article details 100169801"
 					}
 
 					
@@ -590,6 +715,23 @@
 					,
 					
 
+					"l-basic-web-9": {
+						"id": "l-basic-web-9",
+						"title": "浏览器内存泄漏",
+						"category": "",
+						"url": " /L_Basic/web_9/",
+						"content": "浏览器内存泄漏的原因 参考： https: blog.csdn.net muzidigbig article details 100169801"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
 					"m-program-program-1": {
 						"id": "m-program-program-1",
 						"title": "数据可视化项目",
@@ -613,6 +755,40 @@
 						"category": "",
 						"url": " /M_Program/program_2/",
 						"content": "一、数据基准问题 二、会员粉丝引入问题 三、会员数据比较和合并"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"m-program-program-3": {
+						"id": "m-program-program-3",
+						"title": "温顾知新",
+						"category": "",
+						"url": " /M_Program/program_3/",
+						"content": "一、Vue3 二、jest 单元测试 element ui 3参考 系统学习测试用例 三、"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"n-math-math-1": {
+						"id": "n-math-math-1",
+						"title": "动态规划",
+						"category": "",
+						"url": " /N_math/math_1/",
+						"content": "动态规划"
 					}
 
 					
