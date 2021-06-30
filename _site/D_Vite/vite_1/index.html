@@ -10,13 +10,13 @@
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Vite 基础" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Product documentation template for Jekyll." />
-<meta property="og:description" content="Product documentation template for Jekyll." />
+<meta name="description" content="Vite 的构建原理" />
+<meta property="og:description" content="Vite 的构建原理" />
 <link rel="canonical" href="http://localhost:4000/D_Vite/vite_1/" />
 <meta property="og:url" content="http://localhost:4000/D_Vite/vite_1/" />
 <meta property="og:site_name" content="文王之殇 –前端加油站" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/D_Vite/vite_1/","headline":"Vite 基础","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"Product documentation template for Jekyll.","@type":"Article","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/D_Vite/vite_1/","headline":"Vite 基础","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"description":"Vite 的构建原理","@type":"Article","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="文王之殇 --前端加油站" />
@@ -114,6 +114,8 @@
 							<ul>
 								
 									<li class="nav-item current"><a href="/D_Vite/vite_1/">Vite 基础</a></li>
+								
+									<li class="nav-item "><a href="/D_Vite/vite_2/">Vite 的构建工具</a></li>
 								
 							</ul>
 						</li>
@@ -245,7 +247,58 @@
 				<h3>Vite 基础</h3>
 			</div>
 			<article class="content">
-				
+				<blockquote>
+  <p><a href="https://cn.vitejs.dev/guide/why.html#slow-server-start">Vite 的构建原理</a></p>
+</blockquote>
+
+<p>1、在说Vite 之前我觉得有必要先介绍下webpack的由来。
+    早期 Webpack 刚出来的时候，是为了解决低版本浏览器不支持 ESM 模块化的问题，将各个分散的 JavaScript 模块合并成一个文件，同时将多个 JavaScript 脚本文件合并成一个文件，减少 HTTP 请求的数量，有助于提升页面首次访问的速度。后期 Webpack 乘胜追击，引入了 Loader、Plugin 机制，提供了各种构建相关的能力（babel转义、css合并、代码压缩），取代了同期的 Browserify、Gulp。
+    <a href="https://blog.csdn.net/W_ill/article/details/109447225">Webpack 解决了什么问题</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>看完估计大部分人的想法是 ，，，fuck ！！！，搞了那么久的webpack原来只是一个解决问题的临时方案。现在是否要回归正途呢。es module 在浏览器端已经成熟了。孩子养大了。（老版本 ie11及一下不支持）
+![image-20210630114855509](/Users/jacklin/Library/Application Support/typora-user-images/image-20210630114855509.png)
+</code></pre></div></div>
+
+<p>Vite 以 原生 ESM 方式提供源码。这实际上是让浏览器接管了打包程序的部分工作：Vite 只需要在浏览器请求源码时进行转换并按需提供源码。根据情景动态导入代码，即只在当前屏幕上实际使用时才会被处理。</p>
+
+<p>第一次构建的时候，会有一个文件缓存
+  Vite 会将预构建的依赖缓存到 node_modules/.vite。它根据几个源来决定是否需要重新运行预构建步骤:</p>
+
+<p>package.json 中的 dependencies 列表
+  包管理器的 lockfile，例如 package-lock.json, yarn.lock，或者 pnpm-lock.yaml
+  可能在 vite.config.js 相关字段中配置过的
+  只有在上述其中一项发生更改时，才需要重新运行预构建。</p>
+
+<p>如果出于某些原因，你想要强制 Vite 重新构建依赖，你可以用 –force 命令行选项启动开发服务器，或者手动删除 node_modules/.vite 目录。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacklin@192 vu3_vite % npm run dev   
+
+@0.0.0 dev /Users/jacklin/shimao_jack/my/vu3_vite   
+vite   
+
+Pre-bundling dependencies:   
+vue
+@vue/runtime-core
+vue-router
+(this will be run only when your dependencies or config have changed)
+
+vite v2.3.8 dev server running at:
+
+&gt; Local: http://localhost:3000/
+&gt; Network: use `--host` to expose
+</code></pre></div></div>
+
+<p>ready in 441ms.</p>
+
+<p>[@vue/compiler-sfc] <script setup=""> is still an experimental proposal.
+Follow its status at https://github.com/vuejs/rfcs/pull/227.</script></p>
+
+<p>[@vue/compiler-sfc] When using experimental features,
+it is recommended to pin your vue dependencies to exact versions to avoid breakage.</p>
+
+<p>参考文档：
+<a href="https://cn.vitejs.dev/guide/why.html#slow-updates">Vite 官方中文文档</a></p>
+
 
 			</article>
 		</section>
