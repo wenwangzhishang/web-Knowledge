@@ -10,7 +10,8 @@ order: 1
   先简单聊一下比较重大且根本性的变化---但是对于开发影响不是很大的变化    
   一、proxy  
   二、typescript  替换 flow
-  三、 diff 算法的改变
+  三、 [diff](https://blog.csdn.net/zl_Alien/article/details/106595459)算法的改变 
+      Vue 2.X[diff算法](https://github.com/vuejs/vue/blob/2.6/src/core/vdom/patch.js) 
 
   对开发相对来说比较大的已有的
 
