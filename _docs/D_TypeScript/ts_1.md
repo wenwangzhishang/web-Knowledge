@@ -14,7 +14,7 @@ order: 1
   never 类型表示的是那些永不存在的值的类型
   object 表示非原始类型
 
-[ts 接口](https://www.tslang.cn/docs/handbook/interfaces.html) 接口里的属性不全都是必需的。 有些是只在某些条件下存在，或者根本不存在。 可选属性在应用“option bags”模式时很常用，即给函数传入的参数对象中只有部分属性赋值了。
+[ts 接口](https://www.tslang.cn/docs/handbook/interfaces.html) 接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。 接口里的属性不全都是必需的。 有些是只在某些条件下存在，或者根本不存在。 可选属性在应用“option bags”模式时很常用，即给函数传入的参数对象中只有部分属性赋值了。
 
 interface SquareConfig {
   color?: string;
@@ -298,6 +298,12 @@ function loggingIdentity<T>(arg: T[]): T[] {
 与接口一样，直接把泛型类型放在类后面，可以帮助我们确认类的所有属性都在使用相同的类型。
 
 在泛型约束中使用类型参数
+
+> [ts config配置](https://www.tslang.cn/docs/handbook/tsconfig-json.html)
+
+
+> 总结
+  typescript 让输入和输出的变量都变的可推断，同时，也带来的大量的前期开发工作。但是类 接口的实现。可能更好的实现复用。
 
 
 
