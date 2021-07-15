@@ -1,7 +1,7 @@
 ---
 title: Vue2 源码 (2.6)
 category: Vue
-order: 2
+order: 3
 ---
 
 序言 
