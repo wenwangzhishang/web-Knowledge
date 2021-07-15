@@ -8,7 +8,7 @@ order: 3
     本文只解读vue 2 版本的源码，至于vue-router、vuex 等我会持续更新
 
 先借用官网的二张图，我们可以看到整个架构思想
-![image-20210715173119347](assets/image-20210715173119347.png)
+![image-20210715173119347](./assets/image-20210715173119347.png)
 
 ![Vue 实例生命周期](https://cn.vuejs.org/images/lifecycle.png)
 
