@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: 文王之殇 --前端加油站
+title: bighappy --前端加油站
 url: "https://long-pig.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -15,7 +15,7 @@ author:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: 文王之殇 --前端加油站
+  name: bighappy --前端加油站
   links:
     - https://github.com/CloudCannon/edition-jekyll-template
 
