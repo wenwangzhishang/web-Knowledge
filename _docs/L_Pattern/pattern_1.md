@@ -17,6 +17,10 @@ order: 1
 Object.defineProperty
 使用 Object.defineProperty(obj, props, descriptor) 实现观察者模式, 其也是 vue 双向绑定 的核心, 示例如下(当改变 obj 中的 value 的时候, 自动调用相应相关函数):
 
+观察者模式，主要是观察者和被观察者的强耦合，被观察者一旦有数据变化。观察者也需要作出响应。
+
+发布订阅模式，和观察者模式是非常类似的。信息一旦发布 订阅者会收到信息。但是他们之间有一个非常大的区别。发布者和订阅者中间有一个消息处理的中间件。信息同步的作用是由中间件完成通知的。这就解耦了两者的关系。
 
 
+[观察者模式和发布订阅模式的解析](https://www.processon.com/diagraming/60f4e8f81efad41bbeaa923f)
 
