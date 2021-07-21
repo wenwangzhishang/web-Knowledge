@@ -1,12 +1,10 @@
 ---
-title:  函数柯里化
+title:  柯里化和反柯里化
 category: JS 
 order: 3
 ---
 
-export、export default 和 module.export的异同
-
-> 
+>  参数复用
 
 
 
