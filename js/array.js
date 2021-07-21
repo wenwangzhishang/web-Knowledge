@@ -4,10 +4,17 @@ let arr =[1,2,3]
 // })
 // console.log(arr)
 
-let arr2 = arr.map( item =>{
-// console.log(arr)
+// let arr2 = arr.map( item =>{
+// // console.log(arr)
 
-  return 2
-})
-// console.log(arr)
-console.log(arr2)
+//   return 2
+// })
+// // console.log(arr)
+// console.log(arr2)
+
+var array = ['a', 'b'];
+var elements = [0, 1, 2];
+[].push.apply(array, elements);
+
+console.info(array); // ["a", "b", 0, 1, 2]
+
