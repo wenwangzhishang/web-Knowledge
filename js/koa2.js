@@ -49,6 +49,7 @@
 /**
  *  参考：https://segmentfault.com/a/1190000018488597
  *  链式反向递归模型
+ *  js 中的洋葱模型
  * @param {*} next 
  */
  
