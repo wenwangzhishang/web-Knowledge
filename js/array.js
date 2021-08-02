@@ -4,24 +4,28 @@ let arr =[1,2,3]
 // })
 // console.log(arr)
 
-// let arr2 = arr.map( item =>{
-// // console.log(arr)
-
-//   return 2
-// })
+let arr2 = arr.map( item =>{
+// console.log(arr)
+  console.log(item)
+  if(item == 2){
+    // break;
+  }
+  // break
+  // return 2
+})
 // // console.log(arr)
 // console.log(arr2)
 
-var array = ['a', 'b'];
-var elements = [0, 1, 2];
-[].push.apply(array, elements);
+// var array = ['a', 'b'];
+// var elements = [0, 1, 2];
+// [].push.apply(array, elements);
 
-console.info(array); // ["a", "b", 0, 1, 2]
+// console.info(array); // ["a", "b", 0, 1, 2]
 
-  return 2
-})
+//   return 2
+// })
 // console.log(arr)
-console.log(arr2)
+// console.log(arr2)
 
 // let arrtest= [].apply(arr,null)
 // console.log(arrtest)
@@ -30,7 +34,7 @@ console.log(arr2)
  *  https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
  */
 
-var array = ['a', 'b'];
-var elements = [0, 1, 2];
-[].push.apply(array, elements);
-console.info(array); // ["a", "b", 0, 1, 2]
+// var array = ['a', 'b'];
+// var elements = [0, 1, 2];
+// [].push.apply(array, elements);
+// console.info(array); // ["a", "b", 0, 1, 2]
