@@ -22,3 +22,5 @@ order: 1
 [路由守卫](https://angular.cn/guide/router)
 [路由守卫及子路由的介绍](https://angular.cn/guide/router-tutorial-toh#milestone-5-route-guards)
 
+[canActivate](https://angular.cn/api/router/CanActivate#description) 类可以实现的接口
+
