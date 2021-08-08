@@ -172,6 +172,9 @@ console.log(howard.name); // 错误
 注意，我们不能在 Person类外使用 name，但是我们仍然可以通过 Employee类的实例方法访问，因为 Employee是由 Person派生而来的。
 
 
+
+
+
 存取器
 TypeScript支持通过getters/setters来截取对对象成员的访问。 它能帮助你有效的控制对对象成员的访问。
 
@@ -197,7 +200,13 @@ console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
 
 在这个例子里，我们使用 static定义 origin，因为它是所有网格都会用到的属性。 每个实例想要访问这个属性的时候，都要在 origin前面加上类名。 如同在实例属性上使用 this.前缀来访问属性一样，这里我们使用 Grid.来访问静态属性。
 
-抽象类
+实例方法
+    先实例化在调用的方法  是实例方法
+
+es6 通过 static 静态关键字 
+    添加静态方法 静态方法中，没法直接调用类中的属性
+
+抽象类  定义标准 ，让继承的子类都具有这样的功能
 抽象类做为其它派生类的基类使用。 它们一般不会直接被实例化。 不同于接口，抽象类可以包含成员的实现细节。 abstract关键字是用于定义抽象类和在抽象类内部定义抽象方法。
 
 abstract class Animal {
@@ -275,6 +284,8 @@ JavaScript本身是个动态语言。 JavaScript里函数根据传入不同的�
 
 
 > [泛型](https://www.tslang.cn/docs/handbook/generics.html)
+
+    可以支持不特定的数据类型，  传入的参数和返回的参数一致。
 使用泛型变量
 
 现在假设我们想操作T类型的数组而不直接是T。由于我们操作的是数组，所以.length属性是应该存在的。 我们可以像创建其它数组一样创建这个数组：
