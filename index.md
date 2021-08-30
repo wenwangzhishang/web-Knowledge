@@ -11,6 +11,8 @@ ChatApp is a fictional chat application for sending messages and media to others
 Teams and friend groups would use ChatApp to stay up to date if it existed.
 
 > [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/). -->
+### 简述
+本blog 主要是为了记录学习过程以及过往项目的总结。本人从事Vue 的经验相对较多，在介绍其他前端知识点的时候，会从Vue 的设计角度去类比。这样会有助于我自己的学习
 
 ### CSS 部分
 
