@@ -22,7 +22,7 @@ order: 4
 1、如何生成一个hooks   useState
    通过useState 的顺序记录。
 
-2、使用  useEffect 
+2、使用  [useEffect](https://react.docschina.org/docs/hooks-reference.html#useeffect)
  `
   import React, { useState, useEffect } from 'react';
   function Example() {
@@ -54,6 +54,13 @@ order: 4
   componentDidUpdate 
 
   异步的 跟渲染页面不冲突。
+ 3、usecontext 父子组件在hooks 中如何传值
+
+ 4、useReducer 和usecontext 结合使用能够达到Redux 的效果
+    userContext 实现了存储 state  提供了Provider 方法
+    useReduces  action 实现复杂逻辑的传递
+  
+
 
  
 使用规则

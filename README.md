@@ -64,4 +64,9 @@ v：2251597058
 [前端知识体系图谱](https://www.processon.com/mindmap/60e1734a1efad40c1bf4c49e)
 [本文网站地址](https://wenwangzhishang.github.io/web-Knowledge/)
 
+##  项目目录介绍
+|--| branch 
+   |-- dev1 分支主要是博客分支
+   |-- test-stduy 主要做开发测试使用
+
 
